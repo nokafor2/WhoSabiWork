@@ -1,0 +1,508 @@
+
+#mainLiveFeed {
+	height: auto;
+	width: 100%;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #040D14;
+	background-color: #FFF;
+}
+
+#adContainer1 {
+	margin: auto;
+	height: auto;
+	width: 996px;
+	background-color: #FFF;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.adContainer {
+	margin: 10px;
+}
+
+.adDisplay {
+	width:300px; 
+	height:430px; 
+	border: solid thin #040D14; 
+	border-radius:5px; 
+	margin:10px; 
+	padding:5px;
+  float: left;
+  background-color: #FFF;
+  color: #040D14;
+}
+
+/* Customers advertising cards */
+.adImgDisplay {
+	margin-bottom:5px; 
+	width: 300px;
+	height: 300px;
+}
+
+.adAvatar {
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+
+.adLink {
+	text-decoration: none;
+}
+
+.adBusinessTitle {
+	margin-bottom: 0px; 
+	font-style:italic; 
+	font-weight:bold; 
+	font-size: 20px; 
+	display:inline;
+	padding-left: 10px;
+	margin-top: 0px;
+	color: #040D14;
+	cursor: pointer;
+}
+
+.adLike {
+	margin-bottom:0px;  
+	border:none;
+	background-color: #FFF;
+	margin: 0px 5px;
+	/* color: #A51300; */ /* f4b606 */
+}
+
+.adLike:hover {
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.adView {
+	margin-bottom:0px; 
+	display:inline; 
+	border:none;
+	background-color: #FFF;
+	margin: 0px 5px;
+	/* color: #A51300; */
+}
+
+.adComment {
+	margin-bottom: 0px; 
+	display:inline; 
+	border:none;
+	background-color: #FFF;
+	margin: 0px 5px;
+	/* color: #A51300; */ /* f4b606 */
+}
+
+.adComment:hover {
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.adCaption {
+	margin-bottom:0px;  
+	text-overflow: ellipsis; 
+	overflow: hidden; 
+	white-space: nowrap;
+}
+
+.adDate {
+	margin-top:0px;
+	margin-bottom:0px;
+	font-size: 8px;
+}
+
+/* modal styles */
+.bg-modal {
+	width: 100%;
+	height: 100%;
+	/* We use rgba on the background-color here so that the child element will not inherit the its properties */
+	/* background-color: black; */
+	background-color: rgba(0, 0, 0, 0.5);
+	/* opacity: 0.7; */
+	position: fixed;
+	top: 0px;
+	display: flex;
+	justify-content: center; /* to align items horizontally */
+	align-items: center; /* to allign items vertically */
+	color: grey;
+	display: none;
+	z-index: 2000;
+}
+
+.modal-content {
+	width: 900px;
+	min-height: 500px;
+	height: auto;
+	background-color: white;
+	border-radius: 4px;
+	text-align: center;
+	padding: 20px;
+	position: fixed; /* changed from relative */
+	z-index: 5;
+}
+
+.close-btn {
+	position: fixed; /* changed from absolute */
+	top: -15px;
+	/* Set the modal-content positioning to relative and then the close-btn positioning to absolute so that the + will be able to within the modal-content div */
+	right: 0px;
+	font-size: 45px;
+	transform: rotate(45deg);
+	cursor: pointer;
+	color: #A51300;
+}
+
+#enlargedAdImg {
+	width: 400px;
+	height: 400px;
+	float: left;
+	padding: 10px;
+}
+
+#modalPhotoBtnDiv {
+	float: left;
+	padding: 10px;
+	display: block;
+	width: 460px;
+	height: auto;
+}
+
+#imgCaptionModal {
+	color: #808080;
+	display: block;
+	float: left;
+	text-align: justify;
+}
+
+#commentTextarea {
+	display: block;
+	border-radius: 4px;
+	padding: 5px 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: small;
+	height: 17px;
+	width: 100%;
+}
+
+#submitComment {
+	display: block;
+	margin-top: 10px;
+}
+
+#photoCommentDisplay {
+	clear: both;
+	height:auto;
+	width: 460px;
+	background-color:#040D14;
+	margin:5px;
+	padding-top:5px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom: 15px;
+	border-radius: 4px;
+	text-align: left;
+}
+
+#totalComments {
+	padding-left: 18px;
+}
+
+#photoComments {
+	margin: 10px 10px;
+	height: 300px;
+	overflow-y: scroll;
+}
+
+.comment {
+	margin-bottom: 1em;
+	/* border-bottom: thin solid #fff; */ /* If you remove this also remove change the display for commentBody to inline */
+	clear: both;
+	overflow: hidden;
+}
+
+.commentBox {
+	clear: both;
+	overflow: hidden;
+	display: block;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: small;
+	width: auto;
+}
+
+.authorDate {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.author {
+	margin-bottom: 5px;
+	display: inline;
+}
+
+.commentBody {
+	background-color: #fff;
+	color: #808080;
+	/* display: inline; */ /* change with comment border-bottom style */
+	padding: 5px;
+	border-radius: 10px;
+	/* margin: 10px 0px; */	
+}
+
+.meta-info {
+	font-size: 0.8em;
+	margin-top: 5px;
+	display: inline;
+	float: right;
+}
+
+.replyContainer {
+	clear: both;
+	overflow: hidden;
+}
+
+.replyComment {
+	display:block;
+	clear: both;
+	padding: 10px 0px 10px 30px;
+	float: right;
+}
+
+.replyBtn {
+	float: right;
+	border: none;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.replyDiv {
+	display: block;
+	overflow: hidden;
+	clear: both;
+	margin-top: 5px;
+}
+
+.replyTextarea {
+	width: 408px;
+	border-radius: 5px;
+	padding: 5px;
+	color: #808080;
+	height: 17px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: small;
+}
+
+.submitReply, .cancelReply {
+	float: right;
+	margin-top: 3px;
+	border: none;
+}
+
+#modalSignIn {
+	display: none;
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	justify-content: center; /* to align items horizontally */
+	align-items: center; /* to allign items vertically */
+	color: grey;
+	z-index: 2000;
+}
+
+#modalsignIncontent {
+	color: #fff;
+	padding: 20px;
+}
+
+#closeSignInModal {
+	/* position: fixed;  
+	top: -15px;
+	right: 0px; 
+	font-size: 45px;
+	transform: rotate(45deg);
+	color: #A51300; */
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+/**************************************************
+	Responsive CSS for tablet platform 
+***************************************************/
+@media only screen and (max-width: 1000px) {
+	#adContainer1 {
+		width: 704px;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.modal-content {
+    width: 450px;
+    height: 98%; /* changed from inherit */
+    padding: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0px;
+    min-height: auto;
+    display: grid;
+    justify-content: center;
+	}
+
+	#modalPhotoBtnDiv {
+	    float: unset;
+	    padding: unset;
+	    display: block;
+	    width: 100%;
+	}
+
+	#enlargedAdImg {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#photoCommentDisplay {
+		width: auto;
+	}
+
+	#commentTextarea {
+		width: 95%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.adContainer {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.adDisplay {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.close-btn {
+	    position: absolute;
+	    top: -5px;
+	    right: 5px;
+	}
+
+	.modal-content {
+	    width: 400px;
+	    height: 98%; /* changed from inherit */
+	    padding: 5px;
+	    overflow-y: auto;
+	    overflow-x: hidden;
+	    position: fixed;
+	    top: 0px;
+	    min-height: auto;
+	}
+
+	#enlargedAdImg {
+	    width: 390px;
+	    height: 390px;
+	    padding: 5px;
+	}
+
+	#modalPhotoBtnDiv {
+	    padding: 5px;
+	    width: 390px;
+	}
+
+	#photoCommentDisplay {
+		width: auto;
+	}
+
+	.bg-modal {
+		/* top: -50px;
+		z-index: 2000; */
+	}
+
+	.replyTextarea {
+		width: 333px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#adContainer1 {
+		width: 352px;
+	}
+}
+
+@media only screen and (max-width: 685px) {
+	display: grid;
+	justify-content: center;
+}
+
+/***************************************************
+	Responsive CSS for mobile platform using the max
+	with to the height of the phone incase it is 
+	rotated 
+****************************************************/
+@media only screen and (max-width: 480px) {
+	#adContainer1 {
+		width: 315px;
+	}
+
+	.adDisplay {
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+
+	.adContainer {
+		margin-left: auto;
+		margin-right: auto;
+		float: unset;
+	}
+
+	#adContainer1 {
+		display: grid;
+		align-items: center;
+	}
+
+	#modalPhotoBtnDiv {
+	    padding: 0px;
+	    width: 95%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+
+	#imgCaptionModal {
+		float: unset;
+		padding-left: 5px;
+	}
+
+	.close-btn {
+		top:  0px;
+	}
+
+	.modal-content {
+	    width: auto;
+	}
+}
+
+@media only screen and (max-width: 390px) {
+	#enlargedAdImg {
+		width: 320px;
+		height: 320px;
+		float: unset;
+		padding: unset;
+	}
+
+	#commentTextarea {
+	    width: 92%;
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+	#enlargedAdImg {
+		width: 300px;
+		height: 300px;
+		float: unset;
+		padding: unset;
+	}
+}

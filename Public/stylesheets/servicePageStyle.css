@@ -1,0 +1,203 @@
+#mainServicePage {
+	min-height: 440px;
+	overflow: hidden;
+	color: #808080;
+	width: 100%;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #040D14;
+	background-color: #FFF;
+}
+.adContainer1 {
+	margin: auto;
+	height: auto;
+	width: 966px;
+	background-color: #FFF;
+	overflow: hidden;
+}
+#adContainer1 {
+	margin: auto;
+	height: 250px;
+	width: 966px;
+	background-color: #FFF;
+	overflow: hidden;
+}
+
+#messageDiv {
+	margin: auto;
+	height: auto;
+	width: 960px;
+	background-color: #FFF;
+}
+#pagination {
+	margin: 10px auto;
+	height: auto;
+	width: 960px;
+	background-color: #FFF;
+}
+
+.pageIntroDiv {
+	height:auto; 
+	width:100%; 
+	color:#040D14;
+}
+
+.selectionPanel {
+	height:auto; 
+	/* width:100%; */
+	width: 960px;
+	color:#808080;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+.arrow-up {
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid gray;
+	right: 7px;
+	top: 126px;
+	display: none;
+}
+
+.fas {
+	margin-right: 5px;
+}
+
+.linkStyleButton {
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	padding: 2px 10px;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+	text-decoration: none;
+}
+
+.linkStyleButton:hover {
+	background-color: #A51300;
+	color: #fff;
+}
+.linkBtnDiv {
+	margin-top: 15px;
+}
+
+.breaker {
+	display: none;
+}
+
+
+/**************************************************
+	Responsive CSS for tablet platform 
+***************************************************/
+@media only screen and (max-width: 1000px) {
+	#adContainer1 {
+		width: 705px;
+	}
+
+	.selectionPanel {
+		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#mainServicePage {
+		width: auto;
+	}
+
+	.pageIntroDiv {
+		width:auto;
+	}
+
+	.selectionPanel {
+		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#pagination {
+		width: auto;
+	}
+
+	#messageDiv {
+		width: auto;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#adContainer1 {
+		width: auto;
+		/* Code for centering the customer ad panels */
+		display: grid;
+		justify-content: center;
+	}
+}
+
+
+/***************************************************
+	Responsive CSS for mobile platform using the max
+	with to the height of the phone incase it is 
+	rotated 
+****************************************************/
+@media only screen and (max-width: 480px) {
+
+	#mainServicePage {
+		width: auto;
+	}
+
+	.pageIntroDiv {
+		width:auto;
+	}
+
+	.selectionPanel {
+		width: auto;
+		padding-left: 10px;
+	}
+
+	select#vehicleType {
+		margin-left: 20px;
+	}
+
+	select#carBrand {
+		margin-left: 21px;
+	}
+
+	select#technicalService {
+		margin-left: 15px;
+	}
+
+	select#state {
+		margin-left: 75px;
+	}
+
+	select#town {
+		margin-left: 75px;
+	}
+
+	#adContainer1 {
+		width: auto;
+		/* Code for centering the customer ad panels */
+		display: grid;
+		justify-content: center;
+	}
+
+	#pagination {
+		width: auto;
+	}
+
+	#messageDiv {
+		width: auto;
+	}
+
+	.breaker {
+		display: block;
+	}
+}

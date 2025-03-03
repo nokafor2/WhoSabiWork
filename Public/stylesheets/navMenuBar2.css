@@ -1,0 +1,454 @@
+
+* {
+	list-style: none;
+	text-decoration: none;
+}
+
+:root {
+	--background: #FFF;
+	--menuBarTextColor: #A51300;
+	--menuBarTextSize:  15px;
+}
+
+#navHeader {
+	width: 100%; height: 40px; padding: 5px; display: inline-block;
+}
+
+#navLogo {
+	height: 100%; padding-left:20px; padding-right: 20px;
+}
+
+
+/****** Menu bar 1 properties *******/
+#navMenu1 {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	width: 85%;
+}
+
+#navMenu1 ul {
+	margin-right: 25px;
+	padding: unset;
+	display: block;
+}
+
+#navMenu1 ul li {
+	display: inline-block;
+	line-height: 25px;
+	margin: 0 0 0 15px;
+}
+
+#navMenu1 ul #signIn,
+#navMenu1 ul #signUp {
+	float: right;
+	background-color: #A51300;
+}
+
+#navMenu1 ul #signIn,
+#navMenu1 ul #signUp {
+	padding: 0 10px;
+} 
+
+#navMenu1 ul #signIn:hover,
+#navMenu1 ul #signUp:hover {
+	background-color: #fff;
+} 
+
+#navMenu1 ul #signIn a,
+#navMenu1 ul #signUp a {
+	color: #fff;
+}
+
+#navMenu1 ul #signIn a:hover,
+#navMenu1 ul #signUp a:hover {
+	color: #A51300;
+} 
+
+#navMenu1 ul li a {
+	position: relative;
+	color: var(--menuBarTextColor);
+	font-size: var(--menuBarTextSize);
+	padding: 5px 0;
+	text-transform: initial;
+}
+
+/* This adds the underline under the menu bar links */
+#navMenu1 ul li a:before {
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 100%;
+	background: var(--menuBarTextColor);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .4s linear;
+}
+
+#navMenu1 ul li a:hover:before {
+	transform: scaleX(1);
+	transform-origin: left;
+} 
+
+
+/* This will take care of styling for the Sign In and Sign Up button */
+#navMenu1 ul a {
+	position: relative;
+	color: #fff;
+	font-size: var(--menuBarTextSize);
+	padding: 5px 0;
+	text-transform: initial;
+}
+
+#navMenu1 ul a:before {
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 100%;
+	background: var(--menuBarTextColor);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .4s linear;
+}
+
+#navMenu1 ul a:hover:before {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+#navMenu1 ul a:hover,
+#navMenu1 ul a:hover {
+	color: #A51300;
+}
+
+#navMenu1 ul a li:hover,
+#navMenu1 ul a li:hover {
+	border: thin solid #A51300;
+}
+
+
+/************* Hamburger and cancel btn ************/
+label #menuBtn,
+label #cancel,
+label #cancel2 {
+	position: absolute;
+	top: 13px;
+	right: 0;
+	color: var(--menuBarTextColor);
+	font-size: 30px;
+	line-height: 25px;
+	margin-right: 5%;
+	cursor: pointer;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+
+/************** Navigation design layouts ***************/
+
+#accountPreview {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  min-width: 125px;
+  height: 30px;
+  background-color: #FFF;
+  color: #CCC;
+  display: inline-block;
+  margin-right: 3%;
+  cursor: pointer;
+}
+
+#mobileAccountPreview {
+	position: absolute;
+  right: 0;
+  top: 0px;
+  min-width: 125px;
+  height: 30px;
+  background-color: #FFF;
+  color: #CCC;
+  display: inline-block;
+  margin-right: 3%;
+  cursor: pointer;
+  display: none;
+}
+
+#avatarPreview {
+	width: 30px;
+	height: 30px;	
+	border-radius: 50%;
+	position: relative;
+	top: 10px;
+}
+
+#namePreview {
+	display: inline;
+	margin-left: 10px;
+	color: #A51300;
+}
+
+#namePreview2 {
+	color: #A51300;
+	display: inline-block;
+	border: thin solid #A51300;
+	padding: 5px 10px;
+	width: auto;
+}
+
+.accountInfo {
+	position: absolute;
+	width: auto;
+	height: auto; 
+	/* background-color: rgba(128, 128, 128, 0.5);  */
+	background-color: gray;
+	right: 5px;
+	top: 55px; 
+	border-radius: 3px;
+	/* border-bottom: 5px solid #040D14; */
+	/* opacity: 0.8; */
+	/* filter: alpha(opacity=50); */
+	display: none;
+	z-index: 1;
+}
+
+.accountInfoContainer {
+	margin: 10px 10px; opacity: none;
+	font-size: 16px; font-weight: bold; letter-spacing: -0.05em; border-radius: 3px;
+}
+
+#profilePreviewDiv {
+	width: 50px;
+	height: 50px;
+	background-color: #FFF;
+	color: #CCC;
+	display: inline-block;
+	border-radius: 50%;	
+	border: solid thin #FFF;
+	margin-right: 10px;
+}
+
+#avatarPreview2 {
+	width: 50px;
+	height: 50px;	
+	border-radius: 50%;
+}
+
+.accountInfoDiv {
+	display: inline-block; 
+	padding-left: 10px;
+	float: right;
+}
+
+.accountInfoDetails {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.linkBtnDiv {
+	margin-top: 15px;
+}
+
+.linkStyleButton {
+	color: #fff;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	padding: 2px 10px;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+	text-decoration: none;
+}
+
+.linkStyleButton:hover {
+	background-color: #A51300;
+	color: #fff;
+}
+
+.globalNavBtn {
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  border: solid 2px #fff;
+  border-radius: 5px;
+  background-color: gray;
+  padding: 5px;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  text-decoration: none;
+}
+
+.globalNavBtn:hover {
+	background-color: #A51300;
+	color: #fff;
+}
+
+#profileBtn {
+	margin-right: 10px;
+}
+
+#mobileProfileInfo {
+	width: 90%; margin-left: 5%;
+	height: auto; color: #A51300;
+	margin-bottom: 20px;
+	display: none;
+}
+
+#mobileImgNameDiv {
+	display: flex; align-items: center;
+}
+
+#profileFullname, #profileNumber {
+	margin: 10px 0;
+}
+
+
+/********** Responsive Design ****************/
+@media (max-width: 1140px) {
+	#navLogo {
+		padding-left:10px; padding-right: 10px;
+	}
+
+	label #menuBtn {
+		display: block;
+	}
+
+	#navMenu1 ul #signIn,
+	#navMenu1 ul #signUp {
+		float: unset;
+		width: 50%;
+		text-align: center;
+		background: #A51300;
+		margin-left: 25%;
+		border-radius: 5px;
+		line-height: 30px;
+	}
+
+	#navMenu1 ul #contact {
+		border-bottom: 1px solid gray;
+		padding-bottom: 20px;
+	}
+
+	#navMenu1 ul #signIn {		
+	    /* padding-top: 20px; */
+	}
+
+	#navMenu1 ul #signIn a,
+	#navMenu1 ul #signUp a {
+		color: #fff;
+	}
+
+	/* This makes the menu list drop into the div for responsive design */
+	#navMenu1 ul {
+		position: fixed;
+		width: 100%;
+		top: 40px;
+		height: 100vh; /* changed from 50vh */
+		background: #fff; /* #34495e */
+		text-align: left;
+		overflow-y: scroll;
+		display: none;
+		left: 0;  /* this was updated */
+		/* left: -100%; This is used to give a transition effect */
+		/* transition: all .5s; This was added with the update of left: -100% */
+	}
+	
+	#navMenu1 ul li {
+		display: block;
+		margin: 20px 5%;
+		line-height: 20px;
+	}	
+
+	#navMenu1 ul li a, #navMenu1 ul a {
+		font-size: 16px;
+	}
+
+	#navMenu1 ul a:hover,
+	#navMenu1 ul a:hover {
+		color: #A51300;
+	}
+
+	#navMenu1 ul a li:hover,
+	#navMenu1 ul a li:hover {
+		border: thin solid #A51300;
+	}
+
+	/* This will control the changing of the hamburger button */
+	/* #check:checked ~ #navMenu1 ul {
+		/* with the transition effect added in ul, this was added
+		left: 100%;  *//*
+		display: block;
+	}
+
+	#check:checked ~ label #menuBtn {
+		display: none;
+	}
+
+	#check:checked ~ label #cancel {
+		display: block;
+	} */
+
+	/********** navigation layout design ******************/
+	#accountPreview {
+		display: none;
+	}
+
+	#accountInfo {
+		display: none;
+	}
+
+	#mobileAccountPreview {
+		display: inline-block;
+	}
+
+	#mobileProfileInfo {
+		display: inline-block;
+	}
+
+	.mobileProfileDetails {
+		display: block;
+		margin: 20px 0;
+		line-height: 20px;
+		font-size: 16px;
+	  border: unset;
+	  text-align: center;
+		color: #A51300;
+		background-color: #fff;
+		-webkit-transition-duration: 200ms;
+	  transition-duration: 200ms;
+	}
+
+	.mobileProfileDetails:hover {
+		background-color: #A51300;
+		color: #fff;
+		padding: 10px 10px;
+		cursor: pointer;
+	}
+
+	#mobilelogoutBtn {
+		padding-bottom: 30px;
+	}
+}
+
+
+
+@media (max-width: 360px) {
+	#navMenu1 ul #signIn, #navMenu1 ul #signUp {
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	#navMenu1 ul #signIn,
+	#navMenu1 ul #signUp {
+		padding: unset;
+	} 
+}

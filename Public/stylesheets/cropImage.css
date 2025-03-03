@@ -1,0 +1,351 @@
+
+.crop_button {
+	margin: 20px;
+	width: auto;
+	height: 30px;
+	display: inline-block;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#crop {
+	display: none;
+}
+
+#display {
+	margin: 30px auto;
+	/* width: 600px; */
+	width: auto;
+	/* display: block; */
+	display: none;
+}
+
+#cropped_image {
+	margin: auto;
+	display: block;
+}
+
+#decisionBtns {
+	margin: auto;
+	width: 432px;
+}
+
+#rotateBtns {
+	margin: auto;
+	width: 485px;
+}
+
+#rotateLeft {
+	margin: 20px;
+	width: 200px;
+	display: none;
+	cursor: pointer;
+	height: 30px;
+}
+
+#rotateRight {
+	margin: 20px;
+	width: 100px;
+	display: none;
+	cursor: pointer;
+	height: 30px;
+}
+
+#removeImage {
+	width: 150px;
+	margin: 20px;
+	display: none;
+	height: 30px;
+	cursor: pointer;
+}
+
+#actionBtns {
+	width: 300px;
+	margin: 0px auto;
+}
+.croppie-container {
+	width: 100%;
+	height: auto; /* 660px */
+}
+
+#imageBox {
+	/* margin-top: 30px; */
+	display: none;
+}
+
+#cropLinkBtn {
+	text-decoration: none;
+	color: #A51300;
+}
+
+#cropLinkBtn:hover {
+	text-decoration: none;
+	color: #FFF;
+}
+
+
+/* Styles for Profile Image Upload buttons */
+#profileImageDiv {
+	width: 450px;
+	margin-top: 20px;	
+	display: inline-block;
+}
+
+#showProfileImage {
+	width: 100px;
+	height: 100px;
+	background-color: #CCC;
+	margin: 10px;
+	margin-top: 0px;
+	display: inline-block;
+	border-radius: 50%;	
+	border: solid thin #CCC;
+}
+
+#selectProfileImage {
+	width: 250px;
+	height: auto;
+	background-color: #FFF;
+	margin: 10px;
+	margin-top: 0px;
+	display: inline-block;
+	/* padding: 5px; */
+	/* border: solid thin #A51300;
+	border-radius: 5px; */
+}
+
+#showImage {
+	/* width: 420px; 
+	height: auto; 
+	background-color: #FFF; */
+	margin: 10px auto;
+	/* display: block; */
+}
+
+#rotateBtnsDiv {
+	margin: auto;
+	width: 450px;
+}
+
+#rotateLeftBtn {
+	margin: 10px;
+	width: 200px;
+	display: none;
+	cursor: pointer;
+	height: 30px;
+}
+
+/* 
+#rotateRightBtn {
+	margin: 10px;
+	width: auto;
+	display: none;
+	cursor: pointer;
+	height: 30px;
+}
+*/
+#rotateRightBtn {
+	margin: 20px;
+	width: 100px;
+	display: none;
+	cursor: pointer;
+	height: 30px;
+}
+
+#decisionBtnsDiv {
+	margin: auto;
+	width: 432px;
+}
+
+#cropImage {
+	width: auto;
+	margin: 20px;
+	display: none;
+	height: 30px;
+	cursor: pointer;
+}
+
+/* old code
+#cropImage {
+	width: 200px;
+	margin: 10px;
+	display: none;
+	height: 30px;
+	cursor: pointer;
+}
+*/
+
+#changeImage {
+	width: 150px;
+	margin: 20px;
+	display: none;
+	height: 30px;
+	cursor: pointer;
+}
+
+#cancelUpload {
+	width: 200px;
+	margin: 10px;
+	display: inline-block;
+	height: 30px;
+	cursor: pointer;
+}
+
+#displayCrop {
+	margin: 30px auto;
+	width: 450px;
+	/* display: block; */
+	display: none;
+}
+
+#actionBtnsDiv {
+	width: 260px;
+	margin: 0px auto;
+}
+
+#upload_avatar, #remove_avatar {
+	margin: 10px;
+}
+
+#avatarImage {
+	width: 100px;
+	height: 100px;	
+	border-radius: 50%;
+}
+
+#reselectAvatar {
+	display: none;
+}
+
+#reselectPhoto {
+	display: none;
+}
+
+#cropped_avatar {
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	display: flex;
+}
+
+@media only screen and (max-width: 480px) { 
+  #display, #displayCrop {
+  	width: auto;
+  }
+
+  #rotateLeft {
+		margin: 20px 15px;
+	}
+
+	#rotateRight, #rotateRightBtn {
+		margin: 20px 15px;		
+	}
+
+	.crop_button, #cropImage {
+		margin: 20px 15px;
+	}
+
+	#removeImage, #changeImage {
+		margin: 20px 15px;
+	}
+
+    #rotateBtns {
+		width: 475px;
+	}
+
+	#decisionBtns {
+		width: 475px;
+	}
+
+	#decisionBtnsDiv {
+		width: 475px;
+	}
+
+	#actionBtns, #actionBtnsDiv {
+  	width: 475px;
+ 	}
+}
+
+@media only screen and (max-width: 414px) { 
+	#profileImageDiv {
+		/* width: 400px; */
+		width: 1005;
+	}
+
+	#selectProfileImage {
+		width: 210px;
+	}
+
+	#rotateLeft {
+		width: 150px;
+	}
+
+	#rotateRight, #rotateRightBtn {
+		width: 150px;
+	}
+
+	.crop_button, #cropImage {
+		width: 150px;
+	}
+
+	#removeImage, #changeImage {
+		width: 150px;
+	}
+
+	#rotateBtns {
+		width: 365px;
+	}
+
+	#decisionBtns, #decisionBtnsDiv {
+		width: 365px;
+	}
+
+	#actionBtns, #actionBtnsDiv {
+    	width: 365px;
+   	}
+}
+
+@media only screen and (max-width: 320px) { 
+	#display, #displayCrop {
+		width: auto;
+	}
+
+	#profileImageDiv {
+		width: 310px;
+	}
+
+	#rotateLeft {
+		width: auto;
+		margin: 10px 10px;
+		margin-left: 0px;
+	}
+
+	#rotateRight, #rotateRightBtn {
+		width: auto;
+		margin: 10px 10px;
+		margin-left: 0px;
+	}
+
+	.crop_button, #cropImage {
+		width: auto;
+		margin: 10px 10px;		
+	}
+
+	#removeImage, #changeImage {
+		width: auto;
+		margin: 10px 10px;
+		margin-right: 0px;
+	}
+
+	#rotateBtns {
+		width: 285px;
+	}
+
+	#decisionBtns, #decisionBtnsDiv {
+		width: 285px;
+	}
+
+	#actionBtns, #actionBtnsDiv {
+  		width: 260px;
+ 	}
+}

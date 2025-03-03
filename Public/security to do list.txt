@@ -1,0 +1,115 @@
+
+Blueprinting the application
+(Content Management System)
+- Public Area
+	navigation
+	page content
+	read only
+	
+- Admin Area
+	Login Page
+		form
+		- username
+		- password
+		
+	Admin Menu
+		- manage content
+		- manage admins
+		- logout
+		
+	Manage Content
+		- navigation
+		- subjects CRUD
+		- pages CRUD
+		
+	Manage Admins
+		- admins CRUD
+	
+	Logout
+		- do logout
+		- back to login
+
+Site Design
+- Subjects
+	id
+	menu_name: common name to users
+	position
+	visible: boolean to determine if the pave is visible
+
+- Pages
+	id
+	subject_id
+	menu_name
+	position
+	visible: boolean to determine if the page is visible
+	content
+	
+- admins
+	id
+	username
+	password: the password is hashed for encryption 
+
+
+
+Security to do list
+- set up the ini_set() function and include in your production site
+	- google how to use ini_set() function
+	
+- implement the allowed_get_params and allowed_post_params in the web pages (done)
+
+Lesson 03-02-sanitizing data
+- Use PHP sanitization filters (done on some)
+	htmlspecialchars(), htmlentities(), strip_tags(), urlencode(), json_encode(), mysql_real_escape_string(), addslashes()
+
+How to sanitize POST-global variables:
+- save them with a new name usgin 'raw' prefix
+- apply the allowed_post_params() function on it.
+- apply htmlspecialchars() function on it.
+
+Group your folders into public and private folders in the root directory. (DONE)
+
+- Create an error log file to store logging errors (DONE)
+- You can also use already written logging functions from github. 	
+
+- Create a table in the database for blacklisted_ips (id, ips, date_created) (DONE)
+- create a table in the database for failed_logins (username, count, last_time, date_created) (DONE)
+- Create a column in the database for reset_token for the users table (DONE)
+
+- append htmlentities() to all $_POST variables in the validation page (DONE)
+
+- Adjust the session settings in the ini file of the server in the production end
+
+- Adjust the photo and file upload settings in the ini file of the server in the production end
+
+- adjust the image upload folder permissions in the server on the production end
+
+- adjust the max_file_size in the php.ini file in the server on the production end
+
+- ini_set(), use this function to setup php.ini settings in your include file for all the settings you want running on the production end of your website.
+
+- change account status to active in the customers table when in production mode. (done)
+
+- Ensure that all the customers password is encrypted when creating account (done)
+
+- Check for username uniquness in business sign up page just like the case for users sign up. (done)
+
+- Remove the bootstrap in the web pages (done)
+- Change all stye HomePageStyles sheet to that in the public folder in the header of all the webpages
+
+- Design a croping tool for Pictures (DONE)
+
+- Draft a terms and condition for the website and privacy policy (DONE)
+
+- Get the pictres for the advertisement running (done)
+
+- Review how to upload your website on your domian using cpanel (DONE)
+
+- Begin testing on the web development end
+
+- Get your business name registered. (DONE)
+
+- Pulblish your website and begin testing.
+
+- Add email address in the support page. (done)
+
+- Change demo account to active account when you go to production mode online (done)

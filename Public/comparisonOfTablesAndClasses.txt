@@ -1,0 +1,24 @@
+
+MySQL tables            - In Initialize class    - Table classes
+addresses               - available              - address.php
+artisans                - available              - artisan.php
+business_categories     - available              - business_category.php
+bus_brands              - available              - bus_brand.php
+bus_services (check)    - Not available          - 
+car_brands              - available              - car_brand.php
+comments (check)        - available          - comment.php
+customers               - available              - customer.php
+customers_appointments  - available              - customers_appointment.php
+customers_availability  - available              - customers_availability.php
+customers_ratings       - available              - customer_rating.php
+photographs             - available              - photograph.php
+spare_parts (check)     - available              - spare_part.php
+technical_services      - available              - technical_service.php
+truck_brands (check)    - available              - truck_brand.php
+truck_services (check)  - Not available          - 
+users                   - available              - user.php
+These two contradicting tables
+users_comments (check)  - Not available          - 
+user_comments (check)   - available              - user_comment.php
+users_feedback (check)  - available              - users_feedback.php
+vehicle_categories      - available              - vehicle_category.php

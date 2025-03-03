@@ -1,0 +1,455 @@
+.TabbedPanelsContent {
+	min-height: 315px;
+}
+
+#mainUserEditPage {
+	color: #808080;
+	min-height: 440px;
+	overflow: hidden;
+	width: 100%;
+	background-color: #FFF;
+}
+
+#mainUserEditPage h2 {
+	clear: both;
+	text-align:center;
+	background-color: #FFF;
+	width: max-content;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#comments {
+	width: 600px;
+	margin: 5px auto;
+	background-color: #040D14;
+	padding: 10px;
+	// min-height: 320px;
+	height: 450px;
+	overflow: scroll;
+	color: white;
+}
+
+.comment {
+	margin-bottom: 1em;
+	/* border-bottom: thin solid #fff; */ /* If you remove this also remove change the display for commentBody to inline */
+	clear: both;
+}
+
+.author {
+	margin-bottom: 5px;
+	display: inline;
+}
+
+.commentBody {
+	background-color: #fff;
+	color: #808080;
+	// display: inline; /* change with comment border-bottom style */
+	padding: 5px;
+	border-radius: 10px;
+	margin: 10px 0px;
+}
+
+.meta-info {
+	font-size: 0.8em;
+	margin-top: 5px;
+	display: inline;
+	float: right;
+}
+
+#makeComment {
+	padding: 0px 10px; /* top-bottom left-right */
+}
+
+#authorDate {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.replyBtn {
+	float: right;
+}
+
+.replyContainer {
+	clear: both;
+	overflow: hidden;
+}
+
+.replyComment {
+	display: inline-block;
+	clear: both;
+	padding: 10px 0px 10px 30px;
+	overflow: hidden;
+	float: right;
+}
+
+#replyDiv {
+	clear: both;
+	display: none;
+}
+
+.replyTextarea {
+	width: 550px;
+	border-radius: 5px;
+	padding: 5px;
+	color: #808080;
+}
+
+.submitReply {
+	float: right;
+	margin-top: 5px;
+}
+
+.appointmentRequestedList {
+	width:450px;
+	height:auto;
+	float:left;
+	border:2px solid grey;
+	margin:2px;
+	min-height: 340px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.confirmedAppointmentList {
+	width:450px;
+	height:auto;
+	float:right;
+	border:2px solid grey;
+	margin:2px;
+	min-height: 340px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.setUserAppointment {
+	width:425px;
+	height:auto;
+	padding:5px; 
+	border:thin solid grey;
+	float:none;
+	clear:both;
+	margin:5px;
+	border-radius: 4px;
+}
+
+.userAppointDetails {
+	clear:both; 
+	width:440px;
+	/* padding:1px; */
+	overflow: hidden;
+}
+
+.labelInfoStyle {
+	float:left; 
+	padding-right:5px; 
+	margin-top:0px; 
+	margin-bottom:0px; 
+	font-weight:bold;
+}
+
+.labelValue {
+	float:left; 
+	margin-top:0px; 
+	margin-bottom:0px; 
+}
+
+.linkStyleButton {
+	color: #fff;
+	/* font-family: "proxima nova"; */
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	padding: 2px 10px;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+	text-decoration: none;
+}
+
+.linkStyleButton:hover {
+	background-color: #A51300;
+	color: #fff;
+}
+.linkBtnDiv {
+	margin-top: 15px;
+}
+.deleteLinkBtn {
+	margin-top: 15px;
+}
+.deleteLinkBtn>a {
+	color: #fff;
+	/* font-family: "proxima nova"; */
+	font-size: 12px;
+	text-decoration: none;
+}
+.deleteLinkBtn>a:hover {
+	color: #A51300;
+}
+
+.inputText {
+	width: 425px;
+	border: solid 2px #808080;
+	border-radius: 4px;
+	padding: 3px;
+	color: #808080;
+}
+
+.CollapsiblePanelTabHover, .CollapsiblePanelOpen .CollapsiblePanelTabHover {
+	background-color: #CCC;
+	color: #fff
+}
+
+.profileInput {
+	margin: 0px;
+	display: inline;
+}
+
+.clearBtn {
+	float: right;
+	margin-right: 10px;
+}
+
+#validateNumber {
+	color: #A51300; 
+	margin: 0px;
+	margin-left: 10px;
+	display: inline;
+}
+
+#enterTokenDiv {
+	display: none;
+}
+
+.divHeading {
+	margin-top: 0px;
+	text-align: center;
+	background-color: #A51300;
+	color: #FFF;
+}
+
+.divContent {
+	padding: 5px;
+}
+
+.fileUpload {
+	display: none;
+}
+
+.fileUploadBtn {
+	font-size: 15px;
+	-webkit-appearance: none;
+	/* This will remove the default blue border*/
+	outline: none;
+	cursor: pointer;
+	float: left;
+	margin-right: 10px;
+}
+
+/* Settings for when the button gets active */
+.fileUploadBtn:active {
+	background-color: #A513;
+	color: #FFF;
+}
+
+.fileUploadLabel {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 160px;
+	float: left;
+}
+
+#imgTypeLabel {
+	display: inline-block;
+	margin-bottom: 0px;
+}
+
+#reselectAvatar {
+	display: none;
+}
+
+.avatarUploadModal {
+	width: 100%;
+	/* height: 100%; */ /* height is set when image is clicked */
+	/* We use rgba on the background-color here so that the child element will not inherit the its properties */
+	/* background-color: black; */
+	background-color: rgba(0, 0, 0, 0.5);
+	/* opacity: 0.7; */
+	position: absolute;
+	top: 0px; /* changed from -100px, -13% */
+	/* display: flex; */
+	justify-content: center; /* to align items horizontally */
+	/* align-items: center; */ /* to allign items vertically */
+	color: grey;
+	display: none;
+	height: 100%; /* changed from 113% */
+	z-index: 2000;
+}
+
+.avatarUploadContent {
+	width: 500px;
+	height: 570px;
+	background-color: #CCC;
+	border-radius: 4px;
+	/* text-align: center; */
+	padding: 20px;
+	z-index: 2000;
+	/* overflow-y: scroll; */
+	/* position: fixed; */ /* changed from relative */
+	/* top: 10px; */
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.closeAvatarUploadModal {
+	position: fixed; /* changed from absolute */
+	top: 5px;
+	/* Set the modal-content positioning to relative and then the close-btn positioning to absolute so that the + will be able to within the modal-content div */
+	right: 110px;
+	font-size: 45px;
+	transform: rotate(45deg);
+	cursor: pointer;
+	color: #A51300;
+}
+
+.submitClearBtnDiv {
+    margin-top: 5px;
+    display: block;
+    clear: both;
+}
+
+
+/**************************************************
+	Responsive CSS for tablet platform 
+***************************************************/
+@media only screen and (max-width: 1000px) {
+	.inputText {
+		width: auto;
+	}
+
+	.appointmentRequestedList {
+		margin-top: 20px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    min-height: auto;
+	    float: none;
+	}
+
+	.setUserAppointment {
+	    width: auto;
+	}
+
+	.confirmedAppointmentList {
+	    float: none;
+	    margin-top: 30px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-bottom: 2px;
+	    min-height: auto;
+	}
+
+	.TabbedPanelsContent {
+		min-height: auto;
+	}
+
+	#comments {
+	    height: auto;
+	}
+
+	.replyTextarea {
+	    width: 100%;
+	}
+
+	.meta-info {
+	    display: block;
+	    float: none;
+	    clear: both;
+	}
+}
+
+@media only screen and (max-width: 642px) {
+	#comments {
+	    width: auto;
+	}
+}
+
+
+/***************************************************
+	Responsive CSS for mobile platform using the max
+	with to the height of the phone incase it is 
+	rotated 
+****************************************************/
+@media only screen and (max-width: 480px) {
+	.inputText {
+		width: 100%;
+	}
+
+	.appointmentRequestedList {
+	    width: auto;
+	    min-height: auto;
+	    float: none;
+	}
+
+	.setUserAppointment {
+	    width: auto;
+	}
+
+	.confirmedAppointmentList {
+	    width: auto;
+	    float: none;
+	    margin-top: 30px;
+	    margin-left: 2px;
+	    margin-right: 2px;
+	    margin-bottom: 2px;
+	    min-height: auto;
+	}
+
+	.userAppointDetails {
+	    width: auto;
+	}
+
+	.TabbedPanelsContent {
+		min-height: auto;
+	}
+
+	#comments {
+	    width: auto;
+	    height: auto;
+	}
+
+	.replyTextarea {
+	    width: 100%;
+	}
+
+	.meta-info {
+	    display: block;
+	    float: none;
+	    clear: both;
+	}
+
+	input[type="submit"] {
+		/* margin-top: 5px; */
+	}
+
+	.avatarUploadModal {		
+		position: absolute;
+		top: -13%; 
+		height: 113%;
+		z-index: 2000;
+	}
+
+	.avatarUploadContent {
+		width: 100%;
+		height: 113%;
+		padding: 20px;
+		padding-left: 0px;
+		padding-right: 0px;
+		position: fixed; /* changed from relative */
+		z-index: 2000;
+		/* overflow-y: scroll; */
+		top: 0px;
+		left: 0px;
+	}
+}

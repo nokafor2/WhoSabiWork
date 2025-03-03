@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function populate(s1, s2) {
+	var s1 = document.getElementById(s1);
+	var s2 = document.getElementById(s2);
+	// This will clear out the contents of the second select menu whenever a selection is made.
+	s2.innerHTML = "";
+	// Evaluate the conditions that was selected from the array.
+	if (s1.value == "Chevy") {
+		// populate the contents of the select menu
+		// The pipe symbol demarcates between the value and the label
+		var optionArray = ["|", "camaro|Camaro", "corvette|Corvette", "impala|Impala"];
+	} else if (s1.value == "Dodge") {
+		// populate the contents of the select menu
+		// The pipe symbol demarcates between the value and the label
+		var optionArray = ["|", "avenger|Avenger", "challenger|Challenger", "charger|Charger"];
+	} else if (s1.value == "Ford") {
+		// populate the contents of the select menu
+		// The pipe symbol demarcates between the value and the label
+		var optionArray = ["|", "mustang|Mustang", "shelby|Shelby"];
+	}
+	// loop through the selection
+	for (var option in optionArray) {
+		// Split the array value into value and label using the pipe symbol
+		var pair = optionArray[option].split("|");
+		// create an 'option' tag object to be used to populate the select contents
+		var newOption = document.createElement("option");
+		// Use this to access the value of the array
+		newOption.value = pair[0];
+		// Use this to access the label of the array
+		newOption.innerHTML = pair[1];
+		s2.options.add(newOption);
+	}
+}
+</script>
+</head>
+<body>
+<h2>Choose Your Car</h2>
+<hr/>
+Choose Car Make:
+<select id="slct1" name="slct1" onchange="populate(this.id, 'slct2')">
+	<option value=""></option>
+	<option value="Chevy">Chevy</option>
+	<option value="Dodge">Dodge</option>
+	<option value="Ford">Ford</option>
+</select>
+<hr/>
+Choose Car Model:
+<select id="slct2" name="slct2"></select>
+<hr/>
+
+<div id="nameOfDiv">
+<h2>Trial of checkbox lists:</div>
+
+</div>
+</body>
+</html>

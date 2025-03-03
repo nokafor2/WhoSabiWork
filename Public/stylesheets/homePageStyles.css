@@ -1,0 +1,1589 @@
+
+/*
+Website Design Color Hexadecimal Values:
+
+Blue: #2B506C(normal), #4B83AE(lighter), #8DA2C9(lighter2) #79838A(lightest), #C0C4C6(lightest), #043E6A(Darker), #040D14(Darkest), #87ceeb(skyblue)
+Complementary
+
+Red: #A8493C(lightest), #D7BDB9(lighter), #FF7664(normal), #A51300(Darker), #7F0000(Darker), #1E0704(Darkest)
+
+Yellow: #D7D4B9(lightest), #FFF264(lighter), #AAA039(normal), #A59700(Darker), #1E1C04(Darkest)
+*/
+
+@charset "utf-8";
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	/* font-family: "proxima nova"; */
+	font-size: small;
+	color: #FFF;
+	background-color: #040D14;
+	text-align: center;
+	margin: 0px;
+	/* This is set for the photo gallery on the home page 
+	overflow-y: hidden;
+	*/
+}
+
+#topContainer {
+	background-color: #FFF;
+	height: auto;
+	width: 100%;
+	position: fixed;
+	text-align: left;
+	z-index: 2000;
+}
+
+#container {
+	background-color: #79838A;
+	height: auto;
+	width: 1000px; /* 100% */
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	/* padding-top: 110px;  This is a fix hack for fixed navigation bar */
+	top: 54px;
+	text-align: left;
+	border: thin solid #FFF;
+}
+#header {
+	background-color: #FFF; /* #A51300:dark red, #2B506C:navy blue, #040D14: dark blue, #FFF: white */
+	height: 75px;
+	width: 100%;
+}
+#navigation {
+	background-color: #FFF; /* #A51300 */
+	height: 42px;
+	width: 100%;
+	padding-top: 52px; /* changed from 62px */
+	/*
+	border-bottom-color: #1E0704;
+	border-bottom-width: 3px;
+	border-bottom-style: solid; */
+}
+
+#picturePanel {
+	height: 430px; /* Changed from auto, 440px, 430px */
+	width: 100%;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #1E0704;
+	background-color: #FFF;
+}
+#main {
+	height: auto;
+	width: 100%;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #040D14;
+	background-color: #FFF;
+}
+.adContainer1 {
+	margin: auto;
+	height: auto;
+	width: 966px;
+	background-color: #FFF;
+	overflow: hidden;
+}
+
+#logoutForm {
+	display: inline-block;
+}
+
+#logoutBtn {
+	background-color: gray;
+	padding: 5px;
+}
+
+#logoutBtn:hover {
+	background-color: #A51300;
+}
+
+.pageIntroDiv {
+	height:auto; 
+	width:100%; 
+	color:#040D14;
+}
+
+/* This adjusts the default margin of the header tag in the main section */
+.pageIntro {
+	text-align:center; 
+	/* margin:0px; */
+	color: #A51300; /* changed from #808080 */
+	/* font-weight: unset;
+	font-size: medium; */
+}
+
+#adPanel1 {
+	float: left;
+	width: 300px;
+	background-color: #040D14;
+	height: 300px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin: 5px;
+	padding: 5px;
+}
+
+.adContainer {
+    height: 450px;
+    width: 300px;
+    float: left;
+    background-color: #FFF;
+    margin: 5px;
+    padding: 5px;
+    color: #040D14;
+    border: thin solid #040D14;
+    border-radius: 5px;
+}
+
+.adContainer:hover {
+	background-color: #040D14;
+	color: #FFF;
+}
+
+.adContainer img { 
+	height: 300px;
+	width: 300px;
+}
+
+.message {
+	background-color: #fff;
+	display: block;
+	padding: 5px 5px;
+	margin: 0px auto;
+	color: #808080; /* GrayText */
+}
+
+.adContainer3 {
+	height: auto;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#adPanel2 {
+	float: left;
+	height: 300px;
+	width: 300px;
+}
+#adPanel3 {
+	background-color: #FFF;
+	float: left;
+	height: 300px;
+	width: 300px;
+	margin: 10px;
+}
+#adPanel4 {
+	background-color: #FFF;
+	float: left;
+	height: 300px;
+	width: 300px;
+	margin: 10px;
+}
+#footer {
+	/* background-color: #79838A; */
+	background-color: #A51300;
+	height: 100px;
+	width: 100%;
+	color: #FFF;
+}
+.footerStyle {
+	clear:both;
+	background-color: #040D14; /* background-color: #18191F;  */
+	height: auto;
+	width: 100%;
+	color: gray; /* color: #fff; */
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+.footerStyle a {
+	color: gray; /* color: #FFF; */
+}
+
+#footerContent {
+	text-align: center;
+	/*
+	border-top: 2px solid #999; 
+	margin-top: 1em;
+	*/
+}
+
+#footerContent>p>a:hover {
+	color: #fff; /* color: grey; */
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.adContainer2 {
+	margin: auto;
+	height: auto;
+	width: 960px;
+}
+
+.adLink {
+	text-decoration: none;
+}
+
+.adTitle {
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+
+.adContent {
+	padding-top: 0px;
+	font-size: small;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.adImage {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+
+.adImgStyle{
+	width: 300px;
+	height: 300px;
+}
+
+#container #main #TabbedPanels1 .TabbedPanelsContentGroup .TabbedPanelsContent.TabbedPanelsContentVisible .adContainer1 #adPanel1 p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+#adContainerSpareParts {
+	margin: auto;
+	height: auto;
+	width: 960px;
+}
+#adPanelSpareParts {
+	float: left;
+	height: 300px;
+	width: 300px;
+}
+
+.mainFormat {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.mainAboutStyle {
+	background-color: #040D14;
+	height: auto;
+	width: 100%;
+	padding: 5px;
+}
+#main p {
+
+}
+
+#aboutAdImage {
+	float: left;
+	height: 300px;
+	margin: 5px;
+	border: thin solid #333;
+}
+#mainAbout {
+	height: 400px;
+	width: auto;
+	background-color: #040D14;
+	/* background-color: #FFF;
+	color: #040D14; */
+	padding: 5px;
+}
+
+#profileEdit {
+	background-color: #FFF;
+	width: max-content;
+	height: auto;
+	margin: 0px auto;
+}
+
+#mainTechEditPage {
+	color: #808080;
+	min-height: 440px;
+	overflow: hidden;
+	width: 100%;
+	background-color: #FFF;
+
+
+	/* height: auto;
+	width: 1000px; 
+	display: flex;
+	align-items: center; */
+	background-image: url('/Public/images/utilityImages/artisansCollageSmall3.jpg');
+}
+
+#mainTechnician {
+	height: auto;
+	width: 100%;
+	/* background-color: #040D14; */
+	background-color: #FFF;
+}
+.photoGalleryDiv {
+	background-color: #FFF;
+	/* height: 175px; */
+	height: auto;
+	width: 960px;
+	clear: both;
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.mainLogin {
+	background-color: #E1E1E1;
+	height: auto;
+	width: 1000px;
+	/*
+	padding-top: 100px;
+	padding-bottom: 100px; */
+	display: flex;
+	align-items: center;
+	background-image: url('/Public/images/utilityImages/artisansCollageSmall3.jpg');
+	position: relative;
+}
+/*
+.mainLogin::before {
+	content: "";
+	position: absolute;
+	opacity: 0.5;
+	background-image: url('/Public/images/utilityImages/artisansCollageSmall3.jpg');
+	background-color: rgba(0,0,0,0.25);
+} */
+
+.loginPanel {
+	background-color: #FFF;
+	height: max-content;
+	width: 400px;
+	clear: both;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.profilePanel {
+	background-color: #FFF;
+	height: max-content;
+	width: 700px;
+	clear: both;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	/* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+#userProfile {
+	padding-top: 25px;
+	width:300px; 
+	height:300px; 
+	background-color: #fff; 
+	margin:20px; 
+	display: inline-block;
+	font-size: 30px;
+	font-weight: bold;
+	color: #4285f4;
+	border: solid 2px #4285f4;
+}
+
+#customerProfile {
+	padding-top: 25px;
+	width:300px; 
+	height:300px; 
+	background-color: #fff; 
+	margin:20px; 
+	display: inline-block;
+	font-size: 30px;
+	font-weight: bold;
+	color: #A51300;
+	border: solid 2px #A51300;
+}
+
+.profileType:hover {
+	-webkit-box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+	box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+}
+
+#selectProfileTitle {
+	color: #A51300; 
+	font-size: 16px; 
+	font-weight: bold; 
+	text-align:center;
+}
+
+.centerItem {
+	display: flex;
+	justify-content: center;
+}
+
+.techInfo {
+	height: auto;
+	width: 980px;
+	background-color: #040D14;
+	padding: 10px;
+	overflow: hidden;
+	column-count: 2;
+	column-width: 232px;
+	column-rule: 1px solid #fff;
+}
+.autoSpecialtyStyle {
+	clear: both;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+}
+.techCategoryStyle {
+	margin-top:0px; 
+	margin-bottom:0px;
+	list-style-type:none;
+}
+.techDetailsDiv {
+	height: auto;
+	width: 100%;
+	float: left;
+}
+
+#endingH4 {
+	clear: right;
+}
+
+.techInfo h1 {
+	text-transform: uppercase;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+
+}
+.techInfo h3 {
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+	font-size: medium;
+}
+.techInfo p {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.techDetails {
+	font-size: small;
+	float: left;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.techCategoryDiv {
+	height: auto;
+	width: 100%;
+	background-color: #040D14;
+	clear: both;
+	/* margin-left: 10px; */
+	overflow: hidden;
+}
+
+.techCategoryDiv ul {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+/* .techCategoryDiv li {
+	margin-top: 0px;
+	margin-left: 0px;
+} */
+
+.commentDiv {
+	display: flex;
+	justify-content: center;
+	background-color:#FFF;
+	height: auto;
+	width: 980px;
+	padding-left: 10px;
+	padding-right: 10px;
+	/* margin-left: 10px; */
+	overflow: hidden;
+}
+
+#setAppointmentDiv {
+	display: flex;
+	justify-content: center;
+	background-color:#FFF;
+	height: auto;
+	width: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+fieldset{
+	width: 600px;
+	/*background-color: #040D14;
+	color: #A2A2A2;*/
+}
+
+fieldset legend{
+	font-weight:bold;
+}
+.technician_edit {
+	margin-left: auto;
+	margin-right: auto;
+}
+.technician_edit label{
+	float: left;
+	width: 160px;/*	text-align:right;*//*	margin-right:10px;*/
+}
+
+#mainTechEditPage h2 {
+	clear: both;
+	/* padding-left: 400px; */
+	text-align:center;
+	background-color: #FFF;
+	width: max-content;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+table.bordered tr th, table.bordered tr td { border: 1px solid #000000; }
+
+#pagination .selected { font-weight: bold; color: #040D14;} /* changed from #8D0D19 */
+
+.selected { font-weight: bold; color: #8D0D19;}
+
+.bussDescrpLabel {
+	font-weight: bold;
+}
+#carCategories {
+	font-weight: bold;
+}
+
+.displayPicture {
+    height: 220px;
+    width: 200px;
+    margin: 10px;
+    padding: 5px;
+    border: thin solid #808080; /* changed from #333 */
+    float: left;
+    border-radius: 4px;
+    cursor: pointer;
+	color: #808080;
+}
+
+.displayPicture p {
+	margin: 0px;
+}
+
+.CollapsiblePanelsDiv{
+	margin: 20px;
+	height: auto;
+	width: 500px;
+	float: left;
+}
+.TabbedPanelDiv {
+	width: 1000px;
+	height: auto;
+}
+.CusPhotoGallery {
+	height: auto;
+	width: 928px;
+	background-color: #FFFFFF;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #808080;
+	margin: 0px auto;
+	display: block;
+	overflow: hidden;
+}
+#photoUpload {
+	clear: both;
+	height: auto;
+	width: 100%;
+}
+#submitDiv {
+	width: 600px;
+	clear: both;
+	padding-top: 5px;
+}
+.customer_label label{
+	float: left;
+	width: 160px;/*	text-align:right;*//*	margin-right:10px;*/
+	/* clear: both; */
+}
+.labelTitle {
+	float: left;
+	width: 160px;/*	text-align:right;*//*	margin-right:10px;*/
+}
+#delete {
+	width: 100%;
+	float: left;
+	margin-top: 5px;
+}
+
+#mainAdminPage {
+	color: #000;
+	height: auto;
+	width: 100%;
+	background-color: #FFF;
+}
+
+#mainAdminPage h2 {
+	clear: both;
+	/* padding-left: 400px; */
+	text-align:center;
+}
+
+.arrow-up {
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid gray;
+	right: 7px;
+	top: 126px;
+	display: none;
+}
+.accountInfo {
+	position: absolute;
+	width: auto;
+	height: auto; 
+	/* background-color: rgba(128, 128, 128, 0.5);  */
+	background-color: gray;
+	right: 5px;
+	top: 105px;  /* changed from 140px */
+	border-radius: 3px;
+	/* border-bottom: 5px solid #040D14; */
+	/* opacity: 0.8; */
+	/* filter: alpha(opacity=50); */
+	display: none;
+	z-index: 1;
+}
+.accountInfoContainer {
+	margin: 10px 10px; opacity: none;
+	font-size: 16px; font-weight: bold; letter-spacing: -0.05em; border-radius: 3px;
+}
+.accountInfoDiv {
+	display: inline-block; 
+	padding-left: 10px;
+	float: right;
+}
+.accountInfoDetails {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.accountInfoImgDiv {
+	width: 100px;
+	height: 100px;
+	background-color: #FFF;
+	color: #CCC;
+	display: inline-block;
+	border-radius: 50%;	
+	border: solid thin #FFF;
+}
+.accountInfoButton {
+	margin-top: 20px;
+	margin-bottom: 20px; 
+}
+/* .accountInfoContainer>a {
+	color: #fff;
+	text-decoration: none;
+}
+.accountInfoContainer>a:hover {
+	color: #A51300;
+} */
+.accountInfoContainer>p {
+	color:#fff; margin:0px; 
+}
+
+#GlobalNav {
+	background-repeat: no-repeat;
+	position: absolute;
+	/* left: 730px; */
+	right: 0px;
+	top: 5px; /* changed from 45px */
+	width: auto;
+	height: auto;
+	/* z-index: 1; */
+	text-align: center;
+	background-color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 3px;
+	font-size: 15px; /* font-weight: bold; */ letter-spacing: -0.05em;
+}
+#GlobalNav>a{
+	color: #A51300; /* changed from gray */
+	text-decoration: none;
+	padding: 5px 8px;	
+}
+#GlobalNav>a:hover{
+	/* color: gray; */ /* changed from #A51300 */
+	/* text-decoration: none; */
+	background-color: #A51300;
+	color: #fff;
+}
+.fas {
+	margin-right: 5px;
+}
+#navigation button {
+	font-size: 16px;
+}
+.menuNavBtn {
+	display: none;
+}
+#accountInfoMenu {
+	/* Use only this style if you will include the account status menu button in the list navigation menu */
+	/* float:right; */
+	
+	/* Use this for making an absolute account status menu button */
+	position: absolute;
+	width: auto;
+	height: auto; 
+	background-color: gray; /* #fff */
+	color: #A51300; /* for white background */
+	right: 0px;
+	top: 59px; /* edited from 104px */
+	border-radius: 3px;
+	/* border-bottom: 5px solid #040D14; */
+}
+#accountInfoMenu:hover {
+	color: gray;
+}
+.linkStyleButton {
+	color: #fff;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	padding: 2px 10px;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+	text-decoration: none;
+}
+
+.linkStyleButton:hover {
+	background-color: #A51300;
+	color: #fff;
+}
+.linkBtnDiv {
+	margin-top: 15px;
+}
+
+.linkStyleButton2 {
+	color: gray;
+	/* font-family: "proxima nova"; */
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	padding: 2px 10px;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+	text-decoration: none;
+}
+
+.linkStyleButton2:hover {
+	background-color: #A51300;
+	color: #fff;
+}
+
+.error {
+	padding: 5px 5px;
+	width: 100%;
+	overflow-y: auto;
+	color: #808080; /* GrayText */
+	/* display: flex;
+	flex-direction: column; */
+}
+
+.to-top {
+	font-weight: bold;
+	position: fixed;
+	bottom: 100px;
+	right: 15px;
+	background-color: #fff;
+	color: #A51300;
+	padding: 4px 7px;
+	border-radius: 50%;
+	border: solid 2px #A51300;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+	text-decoration: none;
+}
+
+.to-top:hover {
+	background-color: #A51300;
+	color: #fff;
+}
+
+/* dark-red:#A51300 dark-blue: #040D14 */
+/* Used for white background */
+.btnStyle1 {
+	color: #A51300;
+	background-color: #fff;
+	/* font-family: "proxima nova"; */
+	/* font-weight: bold; */
+	font-size: 12px;
+	text-align: center;
+	border: solid 2px #A51300;
+	border-radius: 5px;
+	padding: 5px 10px;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 300ms;
+	text-decoration: none;
+}
+
+.btnStyle1:hover {
+	background-color: #A51300;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* Used for red background */
+.btnStyle2 {
+	/* font-family: "proxima nova"; */
+	/* font-weight: bold; */
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	padding: 5px 10px;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 300ms;
+	text-decoration: none;
+}
+
+.btnStyle2:hover {
+	background-color: #A51300;
+	color: #fff;
+}
+
+/* Used for blue background */
+.btnStyle3 {
+	/* font-family: "proxima nova"; */
+	/* font-weight: bold; */
+	color: #fff;
+	background-color: #040D14;
+	font-size: 13px;
+	text-align: center;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	padding: 5px 10px;
+	-webkit-transition-duration: 200ms;
+	transition-duration: 300ms;
+	text-decoration: none;
+}
+
+.btnStyle3:hover {
+	background-color: #fff;
+	color: #040D14;
+}
+
+.btnStyle4 {
+	background-color: #040D14;
+	color: #FFF;
+	display: block;
+	padding: 20px;
+	margin: 20px auto;
+	text-align: center;
+	border-radius: 10px;
+	width: 300px;
+	font-size: large;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btnStyle4:hover {
+	background-color: #fff;
+	color: #040D14;
+	border: solid 2px #040D14;
+}
+
+.btnStyle4:visited {
+	background-color: #043E6A;
+	color: #FFF;
+	border: solid 2px #043E6A;
+}
+
+.btnStyle5 {
+	background-color: #A51300;
+	color: #FFF;
+	display: block;
+	padding: 20px;
+	margin: 20px auto;
+	text-align: center;
+	border-radius: 10px;
+	width: 300px;
+	font-size: large;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btnStyle5:hover {
+	background-color: #fff;
+	color: #A51300;
+	border: solid 2px #A51300;
+}
+
+.btnStyle5:visited {
+	background-color: #FF7664;
+	color: #FFF;
+	border: solid 2px #FF7664;
+}
+
+.btnStyle1:active, .btnStyle2:active, .btnStyle3:active, .btnStyle4:active, .btnStyle5:active {
+	background-color: #A59700; /* Blue:; 043E6A, Red: 7F0000; Yellow:A59700 */
+}
+
+#logo {
+	float: left;
+}
+
+#logoImg {
+	width: 200px; 
+	height: 100px;
+}
+
+/*
+.slideShowImg {
+	width: 1000px;
+	height: 385px;
+}
+*/
+
+.slideShowImg {
+	width: 100%;
+	height: auto;
+}
+
+.selectStyle {
+	margin: 5px 10px;
+}
+
+#artisanDiv, #sellerDiv {
+	overflow: hidden;
+}
+
+#sparePartDiv {
+	overflow: hidden;
+}
+
+#technicalServiceDiv {
+	overflow: hidden;
+}
+
+#avatarImage {
+	width: 100px;
+	height: 100px;	
+	border-radius: 50%;
+}
+
+.telephone {
+	display: inline-block;
+}
+
+.phoneNotValidated {
+	color: #A51300;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+/* This will set the maximum number of lines for the address in the ad. 
+It will then add ellipsis at the end of the line */
+.max-lines {
+	display: -webkit-box;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	overflow: hidden;
+	max-height: 40px;
+	line-height: 20px;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.adImageIndent1 {
+	width: 100%; 
+	height: auto; 
+	background-color: #D7A151;
+	padding: 10px 0px;
+}
+
+.adImageIndent2 {
+	width: 100%; 
+	height: auto; 
+	background-color: #F4E4CD;
+	padding: 10px 0px;
+}
+
+.adImageIndent3 {
+	width: 100%; 
+	height: auto; 
+	background-color: #C75534;
+	padding: 10px 0px;
+}
+
+.adImageIndent4 {
+	width: 100%; 
+	height: auto; 
+	background-color: #D1D1D4;
+	padding: 10px 0px;
+}
+
+#smallText1 {
+	padding:10px;
+	font-size:10px;
+	clear:both;
+}
+
+.smallText2 {
+	margin: 2px 10px;
+	font-size:10px;
+	clear:both;
+	color: #A51300;
+}
+
+.smallText3 {
+	margin: 0px 0px;
+	margin-bottom: 10px;
+	font-size:10px;
+	clear:both;
+	color: #A51300;
+}
+
+.addressPara {
+	margin-bottom: 0px;
+}
+
+.marginTop {
+	margin-top: 10px;
+}
+
+.forgotPassword {
+	font-size: 12px;
+	font-weight: unset;
+}
+
+#wordCountLabel {
+	display: block;
+	text-align: right;
+}
+
+#avatarProgressBar, #imageProgressBar {
+	width: 100%; display:none; margin-top: 5px;
+}
+
+.display_img {
+	width: 210px; height: 210px; margin-left:auto; 
+	margin-right:auto; margin-top:10px; border:thin solid grey;
+	display: none;
+}
+
+#imgErrorReport, #avatarErrorReport {
+	width: 100%; height: auto; color:red; margin-top: 5px;
+}
+
+.previewImg {
+	width: 200px; height: 200px; margin:5px;
+}
+
+.loader {	
+	position: fixed;
+	z-index: 2100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0, 0);
+	/* center the loader */
+	/* display: flex; */
+	/* center horizontally */
+	justify-content: center;
+	/* center vertically */
+	align-items: center;
+	display: none;
+	/* margin-top: 30%; */
+	/* margin-botton: 25%; */
+}
+
+.loader.hidden {
+	animation: fadeOut 2s;
+	/* This keeps the animation properties set */
+	animation-fill-mode: forwards;
+}
+
+/* Create animation for loader */
+@keyframes fadeOut {
+	/* after 100% completion, hide the gif image */
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.hideElement {
+	display: none;
+}
+
+/*
+#townLabel, #town {
+	display: none;
+} */
+
+.searchDiv {
+	width: 50%; display:block; margin-left: auto; 
+	margin-right: auto; margin-bottom: 10px;
+}
+
+.searchField {
+	width: 75%; padding: 5px; display: inline;
+}
+
+.searchButton {
+	padding: 5px; width: 16%;
+}
+
+.divHeading {
+	margin-top: 0px;
+	text-align: center;
+	background-color: #A51300;
+	color: #FFF;
+}
+
+.divContent {
+	padding: 5px;
+	width: auto; /*Added style*/
+}
+
+.messageModal {
+	width: 100%;
+	height: 100%;
+	/* We use rgba on the background-color here so that the child element will not inherit the its properties */
+	/* background-color: black; */
+	background-color: rgba(0, 0, 0, 0.5);
+	/* opacity: 0.7; */
+	position: fixed; /* changed from absolute */
+	top: 0px;
+	justify-content: center; /* to align items horizontally */
+	/* align-items: center; */ /* to allign items vertically */
+	color: grey;
+	display: none;
+	z-index: 2100;
+}
+
+.messageContainer {
+	width: 300px;
+	height: auto;
+	min-height: 150px;
+	background-color: white;
+	border-radius: 10px;
+	border: thin solid grey;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-bottom: 10px;
+}
+
+#messageContent {
+	width: auto;
+	height: 220px;
+	color: #808080;
+	max-height: 220px;
+	display: block;
+	text-align: justify;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+	padding: 10px;
+	overflow-y: scroll;
+}
+
+#closeBtn {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	width: 30%;
+}
+
+#messageHead {
+	width: 100%;
+	height: auto;
+	background-color: #A51300;
+	color: #FFFFFF;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	font-size: large;
+	font-weight: bold;	
+}
+
+/**************************************************
+	Responsive CSS for tablet platform 
+***************************************************/
+@media only screen and (min-width: 1000px) {
+	/* Styles for customerEditPage2, customerHomePae */
+	.TabbedPanelDiv {
+	    width: auto;
+	}
+
+	.CusPhotoGallery {
+		/* width: 100%; */
+	}
+
+	.CollapsiblePanelsDiv {
+		/* float: unset; */
+	}
+}
+	
+
+@media only screen and (min-width: 871px) {
+	#navigation {
+		height: 38px; /* 42 */
+		width: 100%;
+		padding-top: 58px;
+	}
+
+	#MenuBar1 {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 870px) and (min-width: 801px) {
+	#navigation {
+		height: 38px; /* 42 */
+		width: 100%;
+		padding-top: 58px;
+	}
+
+	#container {
+		width: auto;
+		/* padding-top: 110px;  This is a fix hack for fixed navigation bar */
+		/* top: 105px; 105 */
+		top: 54px;
+	}
+
+	#MenuBar1 {
+		display: none;
+		clear: both;
+	}
+
+	.menuNavBtn {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#header {
+		height: auto;
+	}
+
+	#logoImg {
+		width: 150px;
+		height: 75px;
+	} 
+
+	#accountInfoMenu {
+		top: 38px;
+	}
+
+	.accountInfo {
+		top: 80px;
+	}
+
+	#navigation {
+		height: 38px; /* 42 */
+		width: 100%;
+		padding-top: 38px; /* 58 */
+	}
+
+	#container {
+		width: auto;
+		/* padding-top: 110px;  This is a fix hack for fixed navigation bar */
+		/* top: 80px;  105 */
+		top: 54px;
+	}
+
+	#MenuBar1 {
+		display: none;
+		clear: both;
+	}
+
+	.menuNavBtn {
+		display: block;
+	}
+
+	.adContainer {
+		margin: 10px 20px;
+	}
+
+	/*   Styles for Login Page   */
+	.mainLogin {
+		width: auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	/*   Styles for Login Page   */
+
+	/* Styles for customerEditPage2, customerHomePage */
+	.TabbedPanelDiv {
+	    width: auto;
+	}
+	
+	.CusPhotoGallery {
+	    width: 696px;
+	}
+	/* Styles for customerEditPage2 */
+
+	/* Styles for slide show panel */
+	#picturePanel {
+		height: 362px;
+	}
+	/* Styles for slide show panel */
+
+	/* .loader {
+		margin-top: 40%
+	} */
+}
+
+@media only screen and (max-width: 700px) {
+	#GlobalNav {
+		display: none;
+	}
+
+	.CusPhotoGallery {
+	    width: 464px;
+	}
+
+	.profilePanel {
+		width: 400px;
+		display: grid;
+	    justify-content: center;
+	    align-items: center;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	/*   Styles for userEditPage and creat business account page   */
+	#mainTechEditPage {
+		width: auto;
+	}
+
+	.technician_edit {
+		width: auto;
+	}
+	/*   Styles for creat business account page   */
+
+	/* Styles for userEditPage */
+	.CollapsiblePanelsDiv {
+	    width: auto;
+	    margin: 20px 10px;
+	}
+	/* Styles for userEditPage */
+
+	/* Styles for slide show panel */
+	#picturePanel {
+		height: 275px;
+	}
+	/* Styles for slide show panel */
+
+	/* Style for search Div */
+	.searchDiv {
+		width: 75%; 
+	}
+
+	/* .loader {
+		margin-top: 50%
+	} */
+
+	#profileEdit {
+		width: 100%;
+	}
+}
+
+/***************************************************
+	Responsive CSS for mobile platform using the max
+	with to the height of the phone incase it is 
+	rotated 
+****************************************************/
+@media only screen and (max-width: 480px) {
+	#header {
+		height: auto;
+	}
+
+	#GlobalNav {
+		display: none;
+	}
+
+	#MenuBar1 {
+		display: none;
+	}
+
+	#navigation {
+		padding-top: 38px;
+		height: 30px;
+		width: auto;
+		clear: none;
+	}
+
+	#container {
+		width: auto;
+		/* top: 80px; */
+		top: 54px;
+	}
+
+	#logoImg {
+		width: 150px;
+		height: 75px;
+	} 
+
+	#accountInfoMenu {
+		top: 38px;
+	}
+
+	.accountInfo {
+		top: 80px;
+	}
+
+	.menuNavBtn {
+		display: block;
+	}
+
+	.btnStyle4, .btnStyle5 {
+		width: 250px;
+		padding: 15px;
+	}
+
+	/*   Styles for Login Page   */
+	.mainLogin {
+		width: auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	/*   Styles for Login Page   */
+
+	/*   Styles for userEditPage and creat business account page   */
+	#mainTechEditPage {
+		width: auto;
+	}
+
+	.technician_edit {
+		width: auto;
+	}
+	/*   Styles for creat business account page   */
+
+
+	/* Styles for customer home page */
+	.techCategoryDiv ul {
+		margin-left: 0px;
+		width: auto;
+		overflow: hidden;
+	}
+
+	/* Styles for customer home page */
+
+	/* Styles for userEditPage */
+	.CollapsiblePanelsDiv {
+	    /* width: 426px; */
+	}
+
+	.labelTitle {
+	    width: 110px;
+	}
+	/* Styles for userEditPage */
+
+	/* Styles for customerEditPage2 */
+	.TabbedPanelDiv {
+	    width: auto;
+	}
+	/* Styles for customerEditPage2 */
+
+	/* Styles for customer photo gallery */
+	.CusPhotoGallery {
+	    width: 464px;
+	}
+	/* Styles for customer photo gallery */
+
+	/* Styles for slide show panel */
+	#picturePanel {
+		height: 480px;
+	}
+	/* Styles for slide show panel */	
+
+	/* .loader {
+		margin-top: 60%
+	} */
+}
+
+@media only screen and (max-width: 474px) {
+	/* Styles for customer photo gallery */
+	.CusPhotoGallery {
+	    display: grid;
+	    width: 232px;
+	}
+
+}
+
+@media only screen and (max-width: 414px) {
+	/* Styles for customer photo gallery */
+	.CusPhotoGallery {
+    display: grid;
+    width: 232px;
+	}
+	/* Styles for customer photo gallery */
+
+	/*   Styles for Login Page   */
+	.loginPanel {
+		width: auto;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	/* Styles for userEditPage */
+	.CollapsiblePanelsDiv {
+	    /* width: 360px; */
+	}
+
+	/* Styles for slide show panel */
+	#picturePanel {
+		height: 414px;
+	}
+	/* Styles for slide show panel */
+
+	/* .loader {
+		margin-top: 80%
+	} */
+
+	.profilePanel {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	/* Styles for userEditPage */
+	.CollapsiblePanelsDiv {
+    width: auto;
+    margin: unset;
+	}
+
+	/* Styles for slide show panel */
+	#picturePanel {
+		height: 320px;
+	}
+	/* Styles for slide show panel */
+
+	/* .loader {
+		margin-top: 100%
+	} */
+}

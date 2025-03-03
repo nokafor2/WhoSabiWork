@@ -1,0 +1,176 @@
+/* Import google font  
+
+@import url('https://fonts.googleapis.com/....')
+
+ */
+
+/* This is definition of CSS variable */
+:root {
+	/* --background: rgba(85, 214, 170, .85); */
+	--background: #6CABDD;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+
+body {
+	background: #222;
+	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+
+.content {
+	height: 200vh;
+	backkground-image:  url();
+	background-color: #333;
+	background-blend-mode: multiply;
+	background-size: cover;
+	display: grid;
+	place-items: center;
+}
+
+/* navigation styles start here */
+header {
+	background: var(--background);
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	z-index: 999; /* To stay on top of every thing */
+}
+
+.logo {
+
+}
+
+.nav-toggle {
+	display: none;
+}
+
+.nav-toggle-label {
+	/* We would specify the position where we want toggle button to go */
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 1em;
+	/* Center the position of the x or closing symbol */
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+
+/* This is used to style the handburger button */
+.nav-toggle-label span, 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+	display: block;
+	background: white;
+	height: 2px;
+	width: 2em;
+	border-radius: 2px;
+	position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+	content: '';
+	position: absolute;
+}
+
+.nav-toggle-label span::before {
+	bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+	top: 7px;
+}
+
+nav {
+	position: absolute; /* This is made absolute to stay within the fixed position of the header */
+	text-align: left;
+	top: 100%;
+	left: 0;
+	background: var(--background);
+	width: 100%;
+	/* display: none; A transition will be used to create an animation effect*/
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2em;
+	text-transform: initial;
+	opacity: 0;
+	transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+	color: #000;
+}
+
+/* Listen to the pseudo class :checked */
+/* The ~ looks for a nav that is sibling to .nav-toggle */
+.nav-toggle:checked ~ nav {
+	/* display: block; This will be improved with a transform */
+	transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+	opacity: 1;
+	transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+	.nav-toggle-label {
+		display: none;
+	}
+
+	header {
+		display: grid;
+		/* Use a grid to separate the header into colums @ 33.09 min */
+		grid-template-columns: 1fr auto minmax(800px, 3fr) 1fr;
+	}
+
+	/* Setting the column position for the logo */
+	.logo {
+		grid-column: 2 / 3; /* 0 / 1 */
+	}
+
+	nav {		
+		all:  unset; /*This will remove all the settings for the mobile view*/
+		grid-column: 3 / 4;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	nav ul {
+		display: flex;
+	}	
+
+	nav li {
+		margin-left: 3em;
+		margin-bottom: 0;
+	}
+
+	nav a {
+		opacity: 1;
+	}
+}

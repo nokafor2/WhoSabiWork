@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"path": "C:\\MAMP\\htdocs",
+		}
+	],
+	"settings": {
+		"xdebug": {
+			"url": "http://localhost:81/",
+		},
+	},
+}

@@ -1,0 +1,183 @@
+#mainServicePage {
+	min-height: 440px;
+	overflow: hidden;
+	color: #808080;
+	width: 100%;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #040D14;
+	background-color: #FFF;
+}
+.adContainer1 {
+	margin: auto;
+	height: auto;
+	width: 966px;
+	background-color: #FFF;
+	overflow: hidden;
+}
+#adContainer1 {
+	margin: auto;
+	height: 250px;
+	width: 966px;
+	background-color: #FFF;
+	overflow: hidden;
+	/* background-image: url(../images/utilityImages/artisansCollageSmall.jpg); */
+}
+
+#messageDiv {
+	margin: auto;
+	height: auto;
+	width: 960px;
+	background-color: #FFF;
+}
+#pagination {
+	margin: 10px auto;
+	height: auto;
+	width: 960px;
+	background-color: #FFF;
+	clear: both;
+	color: red;
+}
+
+.pageIntroDiv {
+	height:auto; 
+	width:100%; 
+	color:#040D14;
+}
+
+.selectionPanel{
+	height:auto; 
+	/* width:100%; */
+	width: 960px;
+	color:#040D14;
+	margin: auto;
+	margin-bottom: 10px;
+	color: #808080;
+}
+
+.breaker {
+	display: none;
+}
+
+
+/**************************************************
+	Responsive CSS for tablet platform 
+***************************************************/
+@media only screen and (max-width: 1000px) {
+	#adContainer1 {
+		width: 705px;
+	}
+
+	.selectionPanel {
+		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+/* @media only screen and (max-width: 870px) {
+	#navigation {
+		height: 38px;
+		width: 100%;
+		padding-top: 58px;
+	}
+
+	#container {
+		width: auto;
+	}
+
+	#MenuBar1 {
+		display: none;
+		clear: both;
+	}
+
+	.menuNavBtn {
+		display: block;
+	}
+} */
+
+@media only screen and (max-width: 800px) {
+	#mainServicePage {
+		width: auto;
+	}
+
+	.pageIntroDiv {
+		width:auto;
+	}
+
+	.selectionPanel {
+		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#pagination {
+		width: auto;
+	}
+
+	#messageDiv {
+		width: auto;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#adContainer1 {
+		width: auto;
+		/* Code for centering the customer ad panels */
+		display: grid;
+		justify-content: center;
+	}
+}
+
+
+/***************************************************
+	Responsive CSS for mobile platform using the max
+	with to the height of the phone incase it is 
+	rotated 
+****************************************************/
+@media only screen and (max-width: 480px) {
+	/* #container {
+		width: auto; 
+		top: 80px;
+	} */
+
+	#mainServicePage {
+		width: auto;
+	}
+
+	.pageIntroDiv {
+		width:auto;
+	}
+
+	.selectionPanel {
+		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	select#state {
+		margin-left: 63px;
+	}
+
+	select#town {
+		margin-left: 63px;
+	}
+
+	#adContainer1 {
+		width: auto;
+		/* Code for centering the customer ad panels */
+		display: grid;
+		justify-content: center;
+	}
+
+	#pagination {
+		width: auto;
+	}
+
+	#messageDiv {
+		width: auto;
+	}
+
+	.breaker {
+		display: block;
+	}
+}

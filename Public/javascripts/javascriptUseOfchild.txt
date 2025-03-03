@@ -1,0 +1,18 @@
+var newElement = document.createElement('li');
+newElement.textContent = 'I am a new element';
+
+var list = document.getElementById('my-list');
+// list.appendChild(newElement);
+
+list.insertBefore(newElement, list.firstElementChild);
+
+// remove element
+list.removeChild(newElement);
+
+var replaceElement = document.createElement('li');
+replaceElement.textContent = 'i am replacing you';
+
+// This takes two parameters:
+list.replaceChild(replaceElement, newElement);
+
+console.log(newElement);

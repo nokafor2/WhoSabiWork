@@ -1,0 +1,306 @@
+<table id="pricing">
+  <colgroup>
+    <col id="firstCol" />
+    <col class="dataCols" span="4"/>
+  </colgroup>
+  <thead>
+    <tr>
+      <th rowspan="2">Select a plan</th>
+      <th>Starter</th>
+      <th>Prime</th>
+      <th>Prime</th>
+      <th>Ultra</th>
+    </tr>
+    <tr>
+      <th>$19.95<br />per month</th>
+      <th>$29.95<br />per month</th>
+      <th>$49.95<br />per month</th>
+      <th>$69.95<br />per month</th>
+    </tr>
+  </thead>
+
+  <tfoot>
+    <tr>
+      <th>Summary</th>
+      <td>Just the speed you need to send emails, download map directions, and search the Internet for restaurant reviews.</td>
+
+      <td>A great speed at a great price for the family: kids can play games, adults can pay bills, and everyone can surf at the same time.</td>
+
+      <td>Super speeds for multiple tasks that require more broadband capacity; ideal for gamers who need fast response times.</td>
+
+      <td>Perfect for a small business running multiple media streams, demanding reduced lag time and fast data delivery.</td>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <tr>
+      <th>Download Speed</th>
+      <td>3 Mbps</td>
+      <td>15 Mbps</td>
+      <td>25 Mbps</td>
+      <td>50 Mbps</td>
+    </tr>
+    <tr>
+      <th>Upload Speed</th>
+      <td>512 Kbps</td>
+      <td>6 Mbps</td>
+      <td>10 Mbps</td>
+      <td>20 Mbps</td>
+    </tr>
+    <tr>
+      <th>Cloud Storage</th>
+      <td>2 GB</td>
+      <td>5 GB</td>
+      <td>15 GB</td>
+      <td>40 GB</td>
+    </tr>
+    <tr>
+      <th>E-mail Accounts</th>
+      <td>2 Accounts</td>
+      <td>3 Accounts</td>
+      <td>5 Accounts</td>
+      <td>10 Accounts</td>
+    </tr>
+    <tr>
+      <th>24/7 Support</th>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+table {
+  background: linear-gradient(to bottom, rgb(190, 215, 255), black);
+  border: 5px solid gray;
+}
+
+th, td {
+  border: 3px solid gray;
+  line-height: 1.4em;
+  padding: 8px;
+}
+
+th {
+  background: black;
+  color: rgb(130, 210, 255);
+  font-weight: normal;
+}
+
+td {
+  color: white;
+  font-size: 0.9em;
+  vertical-align: top;
+}
+
+col#firstCol {
+  width: 24%;
+}
+
+col.dataCols {
+  width: 19%
+}
+
+thead tr {
+  height: 60px;
+}
+
+thead tr:first-of-type th:first-of-type {
+  font-size: 2em;
+}
+
+thead tr:first-of-type th:not(:first-of-type) {
+  background: transparent;
+  color: black;
+}
+
+
+
+
+
+
+
+<table class="programs">
+  <caption>All Times Central</caption>
+
+  <colgroup>
+    <col class="timeColumn" />
+    <col class="wDayColumns" span="5" />
+    <col class="wEndColumns" span="2" />
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+      <th>Sun</th>
+    </tr>
+  </thead>
+
+  <tfoot>
+    <tr>
+      <td colspan="8">Support your Public Radio Station</td>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <tr>
+      <th>5:00</th>
+      <td rowspan="4" colspan="5">Dawn Air</td>
+      <td rowspan="4">Dawn Air Weekends</td>
+      <td rowspan="2">Sunday Magazine</td>
+    </tr>
+    <tr>
+      <th>5:30</th>
+    </tr>
+    <tr>
+      <th>6:00</th>
+      <td rowspan="2">Weekend Reflections</td>
+    </tr>
+    <tr>
+      <th>6:30</th>      
+    </tr>
+    <tr>
+      <th>7:00</th>
+      <td colspan="5">Local News</td>
+      <td rowspan="2">Weekend Wrap</td>
+      <td rowspan="2">Radio U</td>
+    </tr>
+    <tr>
+      <th>7:30</th>
+      <td colspan="5">World News Feed</td>
+    </tr>
+    <tr>
+      <th>8:00</th>
+      <td rowspan="4" colspan="5">Classical Roots</td>
+      <td rowspan="3">What Can You Say?</td>
+      <td rowspan="4">University on the Air</td>
+    </tr>
+    <tr>
+      <th>8:30</th>
+    </tr>
+    <tr>
+      <th>9:00</th>
+    </tr>
+    <tr>
+      <th>9:30</th>
+      <td rowspan="3">Animal Talk</td>
+    </tr>
+    <tr>
+      <th>10:00</th>
+      <td rowspan="4" colspan="5">Symphony City</td>
+      <td>Word Play</td>
+    </tr>
+    <tr>
+      <th>10:30</th>
+      <td>Brain Stew</td>
+    </tr>
+    <tr>
+      <th>11:00</th>
+      <td rowspan="3">Opera Live from the East Coast</td>
+      <td>The Inner Mind</td>
+    </tr>
+    <tr>
+      <th>11:30</th>
+      <td>Grammar Rules!!</td>
+    </tr>
+    <tr>
+      <th>12:00</th>
+      <td colspan="5">Book Club</td>
+      <td>Weekend Wrap</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+table.programs {
+  border: 15px outset rgb(151, 151, 151);
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+tr {
+  height: 25px;
+}
+
+th, td {
+  border: 1px solid gray;
+  vertical-line: top;
+  padding: 5px;
+}
+
+
+
+caption {
+  text-align: center;
+  caption-side: bottom;
+}
+
+
+col.timeColumn {
+  background-color: rgb(215, 205, 151);
+  width: 10%;
+}
+
+col.wDayColumns {
+  background-color: rgb(236, 255, 211);
+  width: 11%;
+}
+
+col.wEndColumns {
+  background-color: rgb(255, 231, 255);
+  width: 17%;
+}
+
+
+
+
+thead {
+  color: white;
+  background-color: rgb(105, 177, 60);
+}
+
+thead th:first-of-type {
+  background-color: rgb(153, 86, 7);
+}
+
+thead th:nth-of-type(7), thead th:nth-of-type(8) {
+  background-color: rgb(153, 0, 153);
+}
+
+
+
+
+tfoot {
+  color: white;
+  background-color: black;
+}
+
+
+
+
+@media only screen and (min-width: 641px) {
+  p {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+
+    -moz-column-rule: 1px solid black;
+    -webkit-column-rule: 1px solid black;
+    column-rule: 1px solid black;
+  }
+}

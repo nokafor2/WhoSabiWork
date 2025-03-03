@@ -1,0 +1,226 @@
+#searchName, #searchCusName, #updatePwd, #updatePwd2, #closeFoundUsers, #closeFoundCustomers {
+	margin-right: auto; margin-left: auto;
+	width: 30%; display: block;
+}
+
+#searchName:active, #searchCusName:active, #updatePwd:active, #updatePwd2:active, #closeFoundUsers:active, #closeFoundCustomers:active, #checkCreditBal:active, #genPwdBtn:active {
+	background-color: #A59700; /* Blue:; 043E6A, Red: 7F0000; Yellow:A59700 */
+}
+
+#checkCreditBal, #genPwdBtn {
+	margin: 10px auto;
+	width: auto; display: block;
+}
+
+.cusTextField {
+	width: 95%; 
+	height: 30px;
+	border: 0px;
+	outline: none;
+	box-shadow: inset 0 0 10px #C0C4C6; /* #eee */
+	border-radius: 5px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	/* font-family: sans-serif, Arial; */
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.divBox {
+	width: 400px;
+	height: 150px;
+	border-radius: 4px;
+	border: 2px solid gray;
+	margin: 20px auto;
+	display: block;
+}
+
+.updateDivBox {
+	width: 400px;
+	height: 190px;
+	border-radius: 4px;
+	border: 2px solid gray;
+	margin: 20px auto;
+	display: block;
+}
+
+.checkCreditBox {
+	width: 400px;
+	height: 120px;
+	border-radius: 4px;
+	border: 2px solid gray;
+	margin: 20px auto;
+	display: block;
+}
+
+.groupTools {
+	float: left;
+	width: 490px;
+	height: auto;
+}
+
+.foundUsers {
+	width: 400px;
+	height: auto;
+	border-radius: 4px;
+	border: 2px solid gray;
+	margin: 20px auto;
+	display: none;
+	padding-bottom: 10px;
+}
+
+.foundCustomers {
+	width: 400px;
+	height: auto;
+	border-radius: 4px;
+	border: 2px solid gray;
+	margin: 20px auto;
+	display: none;
+	padding-bottom: 10px;
+}
+
+.userDetailsGroup, .customerDetailsGroup {
+	border: thin solid gray;
+	margin: 10px 0px;
+}
+
+.userDetail, .customerDetail {
+	height: auto;
+	margin: 5px 10px;
+	display: block;
+}
+
+.detailsContent {
+	display: inline;
+}
+
+.labelContent {
+	width: 120px;
+	display: inline-block;
+}
+
+.feedbackDiv {
+	width: 400px;
+	height: auto;
+	border: thin solid gray;
+	margin: 10px 34px;
+	display: inline-block;
+}
+
+#feedbackContainer {
+	width: 100%;
+	height: auto;
+}
+
+#feedbackOption {
+	margin: 10px 20px;
+}
+
+#feedbackHolder {
+	width: auto;
+	height: auto;
+	border-radius: 4px;
+	border: 2px solid gray;
+	margin: 20px 20px;
+	display: none;
+}
+
+.feedbackMsgBox {
+	width: auto; height: 100px; overflow-y: scroll; padding: 5px;
+	border: 1px solid gray;
+}
+
+.resolved {
+	margin: 5px 10px;
+	background-color: greenyellow;
+	color: #000;
+	padding: 5px;
+	margin-left: 0px;
+}
+
+.unresolved {
+	margin: 5px 10px;
+	background-color: #A51300;
+	color: #FFF;
+	padding: 5px;
+	margin-left: 0px;
+}
+
+.deleteBtn {
+	margin: 5px 10px;
+	background-color: orange;
+	color: #FFF;
+	padding: 5px;	
+	float: right;
+	margin-right: 0px;
+}
+
+.hidden {
+	display: none;
+}
+
+#statisticsDiv {
+	margin: 10px 34px;
+	display: block;
+}
+
+.tableDiv {
+	overflow-x: scroll;
+}
+
+/***************************************************
+	Responsive CSS for mobile platform considering the max
+	width and the height of the phone incase it is 
+	rotated 
+****************************************************/
+@media only screen and (max-width: 800px) {
+	.feedbackDiv {
+    width: 400px;
+    margin: 20px auto;
+    display: block;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.groupTools {
+		width: 100%;
+	}
+
+	.divBox {
+		width: auto;
+		margin: unset;
+	}
+
+	.updateDivBox, .checkCreditBox {
+		width: auto;
+		margin: 20px auto;
+	}
+
+	.foundUsers, .foundCustomers {
+		width: auto;
+	}
+
+	.feedbackDiv {
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+	}
+
+}
+
+
+@media only screen and (max-width: 320px) {
+	.feedbackDiv {
+    width: auto;
+    margin: 20px 5px;
+	}
+
+	#statisticsDiv {
+    margin: 10px 5px;
+	}
+
+	#feedbackHolder {
+    margin: unset; 
+	}
+}

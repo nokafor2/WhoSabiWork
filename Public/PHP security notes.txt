@@ -1,0 +1,268 @@
+
+PHP Security
+- Total security is unachievable
+- PHP is a popular target
+- Equation: Awareness + Protection = Security
+
+General Security Principles
+- Least privilege: giving a user account privileges only essential to that users work. Nothing more.
+- Code accesses privileges: controlling the visibility of class variables and functions.
+- Simple is more secure
+- Never trust users: You should be paranoid. 
+- Expect the unexpected: The goal is expect the crime before it happens
+- Defense in depth: Layered defense, if one security gets circumvented, there will be another to provide support.
+- Security to obscurity: Limit the amount of exposed information to hackers. Limit the amount of feedback given to hackers.
+- Blacklisting and whitelisting: Blacklist is a reference list for what is forbiden. Whitelisting is a reference list for what is permitted. Whitelisting also means restricted by default. In general, choose to define the things that are permitted than listing the things that are forbiden.
+- Map the exposure points and data passageways in your application: Incoming data through URLs, froms, cookies, data, sessions, 
+
+
+Keeping Versions Up to Date
+- Easiest and most important security measure
+- Security requires an ongoing commitment
+- New versions often include bug fixes and security patches
+- This applies to PHP, web server, database, libraries, third-party code (framework like wordpress)
+- All servers (production, development) on same versions
+- PHP.net is useful tool to find all the latest version. It is usally on the top right corner of the web page.
+- Most of the updates include a CVE-number, refers to Common Vulnerability Exposure Database. Search for cve.mitre.org with this websie, you can check the CVE-number and look at the updated vulnerabilities.
+- Make it a regular habit to keep your PHP installations updated.
+
+phpinfo and phpMyAdmin
+- The first file a hacker wants to see it the database password file
+- The second file is the phpinfo.
+
+- phpinfo: powerful server information - It contains all sorts of useful server information.
+- You can run the file with the command <?php phpinfo(); ?>
+- phpinfo is mostly useful for troubleshooting. 
+
+- phpMyAdmin: powerful access to data
+- It is a third party application. It gives good access to mySQL
+
+Security options for phpinfo and phpMyAdmin
+- Do not rename the phpinfo files, leave both the phpinfo and phpMyAdmin off your production server.
+- require a password
+- with apache, use .htaccess files
+- HTTP authentication mode in phpMyAdmin
+
+phpMyAdmin documentation
+- http://docs.phpmyadmin.net/en/latest/setup.html
+#securing-your-phpmyadmin-installation
+- Remove setup directory after initial setup
+- Choose the authentication method
+- Set up MySQL AllowDeny rules
+- Use authentication proxy
+- Enable Captcha to prevent automated requests
+
+Configure Register Globals
+- register_globals = Off
+- Register globals is turned off by default from version PHP version 4.2
+- PHP version 5.4 removed the configuration of register globals always off
+- Register globals means if you have data coming in as a get-request, post-request, put-request, cookie-request, then that variable is made to you as a variable
+- If you will use register globals, then all variables must be initialized before you begin using them
+- Using superglobals is more secure than using register globals
+- Superglobals includes: $_GET['page'], $_PUT['page'], $_COOKIE['page'], $_SESSION['page']
+
+Configure Error Reporting
+- During development, error reporting is turned on. When you are running online error reporting should be turned off, so that users will not know what has gone wrong.
+- There are two sets of configuration needed, one for development and one for production.
+- error_reporting: controls what errors are worthy of PHP attention.
+- display_errors: controls if an error should be displayed in a browser to the user.
+- log_errors: controls if an error should be logged to a log file
+- error_log: declares the path to the log file, so that PHP can find it and log the errors there.
+- These values should be set in the php.ini file
+
+How to tell PHP to report errors
+- E_ERROR (fatal errors) - Errors PHP was not able to recover from
+- E_WARNING (non-fatal errors) - PHP found a big problem, but was still able to go with the rest of the script
+- E_NOTICE (possible error) - Things that might be possible problems
+- E_STRICT (>5.0, suggested improvements) - This that can be fixed if you want to be more meticulous with your code
+- E_DEPRECATED (>5.3, code scheduled for removal) - These are warnings for codes that are scheduled for removal
+- E_ALL - It encompases all these codes above. It is hardly encountered.
+
+Development settings for error_reporting
+- before PHP version 5.0, error reporting was set like: error_reporting = E_ALL
+- From version 5.4 and above: erro_reporting = E_ALL
+
+Production settings for error_reporting
+- Due to the large volume of traffic, we limmit the types of errors to be logged-in in order not to make the error log folder difficult to manage, thus we do:
+- erro_reporting = E_ERROR | E_WARNING | E_PARSE
+- error_reporting = E_ALL ^ E_DEPRECATED : this means show me all the errors except the deprecations
+- erro_reporting = E_ALL ^ (E_STRICT | E_DEPRECATED | E_NOTICE) : this means all the errors except errors that are strict, deprecated and notice
+
+- During development we want display errors to be on, but during production we don't want it to be on
+- Development: display_errors = On
+- Production: display_errors = Off
+
+log_errors: Used to store the errors generated. It is useful during production mode when you don't want the users to see the errors generated.
+Development: log_errors = Off
+Production: log_errors = On
+
+error_log: Proide the path of find the logged errors
+Development: error_log = ''
+Production: error_log = /private/path/to/errors.log (this is just an example path)
+            error_log = C:/private/path/to/errors.log (useful on windows)
+			error_log = syslog (this will turn to the operating system, to find out where the logs will be)
+
+Configure Magic Quotes
+- Added to prevent SQL injection
+- When turned on, will automatically escape all GET/POST/COOKIE data for SQL
+- Escapes all quatoation marks, backslash, and NULL
+- The intent is to eliminate any data from the user before it will be sent to the database
+- It is deprecated in PHP 5.3, and removed in PHP 5.4
+- Process to turn it off:
+- magic_quotes_gpc = Off  (gpc: get, post and cookie) for where it will implement it
+- magic_quotes_runtime = Off its for any functions that return data from any source.
+
+Configure Safe Mode
+- when turned on, it checks for file ownership.
+- confirms matching file owner IDs before accessing files
+- Most often used on shared hosting servers
+- Also disables or restricts some PHP functions
+- Deprecated in 5.3; and removed in 5.4
+- Turn it on or off by: safe_mode = Off
+- If it will be used, then take the following steps:
+- safe_mode_gid = Off
+- sage_mode_include_dir = /path/to/allowed/includes, for directories that will not be needed to be checked
+- sage_mode_exec_dir = /path/to/allowed/executables, for whitelisting files
+- It not a very helpful way of securing PHP, so it was removed all together.
+
+Other Optional Configurations
+- expose_php = Off: Doesn't tell the user what version we are running
+- server signature can be turned off by doing: server_signature = Off
+
+Limiting Configurations
+- memory_limit = 8M
+- post_max_size = 8M (maximum size that a post request can send)
+- max_execution_time = 30: maximum execution time for a request
+- max_input_time = 60
+
+- adjust these values in order to conserve your resources, also it's too much resources is available, a hacker can use it to do a denial of service attack.
+
+Disabling Configurations
+- disable_functions = show_source, exec, shell_exec, system, passthru, proc_open, popen
+- this disable some powerful functions that are not allowed to run for any reason.
+- enable_dl = Off (dl - dynamic loading) determines whether or not PHP can dynamically load PHP extentions
+
+File Configurations
+- file_uploads = On : can be turned off if you don't need your users to upload files otherwise leave it on
+- max-file_uploads = 20
+- upload_max_filesize = 2M
+- open_basedir = /path/to/public/directory (limits the files that can be accessed by PHP to just the specified file. If you do this, also specify ur temporary directory)
+- upload_tmp_dir = /path/to/tmp/directory
+
+Remote File Configurations
+- This determines if we want PHP to include or open files from the internet. This can be useful with wordpress, joomla etc to autoupdate themselves, it can be used for calling remote server functions.
+- allow_url_fopen = Off
+- allow_url_include = Off 
+
+You can get a full list of the PHP directives from the website: http://php.net/manual/en/ini.php
+
+
+Lesson 02-08-sharedhost
+PHP on a Shared Host
+- On a shared host, it will not be possible to configure php.ini file, the ISP will have control of the instead.
+- Thus, you will need a PHP function to configure the file at runtime instead. This will allow you to have ur own PHP configurations that are different from other PHP website on the server. 
+- To do this, we use the ini_set() function.
+- Keep all your configurations in a single PHP file
+- ini_set('what we want to set', 'what we want to set it to')
+Example:
+<?php
+	ini_set('error_reporting', E_ALL ^ E_DEPRECATED);
+	ini_set('display_errors', 'Off');
+    ini_set('log_errors', 'On');
+	ini_set('error_log', '/path/to/errors.log');
+?>
+- However, there are some functions that cannot be disabled with the ini_set() except with php.ini file.
+- Consider a Virtual Private Server instead.
+- On a Virtual Private Server, you are sharing hardware but not software. Everybody has there own operating system
+- On Shared Host, you share both hardware and software
+- Shared hosting is less secure than Virtual Private Servers
+
+
+Lesson 03-01-validating input
+Validating Input
+- Determine data expectations
+- Consider application and database requirements
+- Which data, what format, which values
+
+Expected data
+- Only allow expected data in submissions
+- Set default values, replace the default values with the inputed values.
+
+
+Lesson 03-02-sanitizing data
+Sanitizing Data
+- Use type casting, not type juggling
+- Sanitize SQL, HTML, JavaScript, JSON, XML, 
+- Encoding characters
+	- replace powerful characters with harmless equivalents
+- Escaping characters
+	- add escape characters before powerful characters
+- Use PHP sanitization filters
+	- htmlspecialchars(): look for characters that have special meaning to HTML and render them harmless by encoding them to HTML entities
+	- htmlentities(): It is going to look for any character for which there is HTML entity
+	- strip_tags(): Instead of encoding, remove everything that is HTML and PHP tags. It is used with strings
+	- urlencode(): Encodes a string which will be used in a string when it is clicked on
+	- json_encode(): Encodes a string so that it will be used in JavaScript or JSON 
+	- mysql_real_escape_string(): Escape strings for use in mysql database
+	- addslashes(): Escape key meta characters, primarily quatoation marks, this is PHP function for escaping strings used in database. Howeve, any database specific function will be preferable.
+	
+
+Lesson 03-03-labeling variables
+Labeling Data
+- Use names to identify condition of data
+	- Names for unsanitized datas are: dirty, raw, tainted, unsafe
+	- Names for sanitized data: clean, filtered, sanitized, safe
+- You could also create an associative array to store dirty and clean variables
+
+
+Lesson 03-04-keeping code private
+Keeping Code Private
+- Public directory
+	Acccessible by the web server
+	Presentation code
+	Calls to functions in private libraries
+	
+- Libraries directory
+	Not accessible by the web server
+	Acccessible by your code via the file system
+	
+- Private Credentials
+	- Plain text credentials are dangerous
+		Give them highest level of care
+		Keep them separate from code
+		Keep them out of version control systems
+		Have as few copies as necessary
+		
+Smart Defaults
+	End all filenames with ".php"
+		Web server will process as PHP, not display as text
+	Keep an index.php file in every directory (The will be the default directory the webserver will look for when someone specifies a directory without specifying a file. If there is no index.php, then the webserver will return the content of the directory instead, which is risky. )
+		Give the opportunity to redirect to the homepage
+		Or return 404 Page Not Found
+		
+Group your folders into public and private folders in the root directory.
+- Put a redirect/index.php to the root of your website.
+
+
+Lesson 03-05-Smart Logging
+- Three main things to be loggin in are:
+	- Errors
+	- Sensitive actions
+	- Possible attacks
+- Create an error log file to store logging errors
+- You can also use already written logging functions from github. 	
+
+- Remeber to edit the link on production mode or when the website is hosted on the server
+
+
+
+
+
+
+
+
+
+
+
+
+
