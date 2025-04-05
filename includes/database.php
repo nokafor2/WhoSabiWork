@@ -5,14 +5,12 @@ class MySQLDatabase {
 	
 	private $connection; // the handle for connection to the database
 	public $last_query; // Tells the last query we executed
-	private $magic_quotes_active;
 	private $real_escape_string_exists;
 	private static $_instance;  
 	
 	// create a construct for the class
 	function __construct() {
 		$this->open_connection();
-		$this->magic_quotes_active = get_magic_quotes_gpc();
 		$this->real_escape_string_exists = function_exists("mysqli_real_escape_string");
 	}
 
@@ -114,34 +112,21 @@ class MySQLDatabase {
 	// Having this function is useful in case there is a change in the preparation of mysql function, everything can be changed in one location.
 	public function escape_value( $value ) {
 		if( $this->real_escape_string_exists ) { // PHP v4.3.0 or higher
-			// undo any magic quote effects so mysqli_real_escape_string can do the work
-			if( $this->magic_quotes_active ) { 
-				$value = stripslashes( $value ); 
-			}
 			$value = mysqli_real_escape_string($this->get_connection(), $value);
-		} else { // before PHP v4.3.0
-			// if magic quotes aren't already on then add slashes manually
-			if( !$this->magic_quotes_active ) { $value = addslashes( $value ); }
-			// if magic quotes are active, then the slashes already exist
+		} else { 
+			$value = addslashes( $value );
 		}
 		return $value;
 	}
 	
 	// This function prepares values for submission to SQL. This does the same thing as the 'escape_value' function, but redundant. 
 	public function mysql_prep($value) {
-		$magic_quotes_active = get_magic_quotes_gpc();
 		// i.e PHP >= v4.3.0
 		$new_enough_php = function_exists("mysqli_real_secape_string");
 		if($new_enough_php){ // PHP v4.3.0 or higher
-			// undo any magic quote effects so mysqli_real_escape_string can do the work
-			if($magic_quotes_active) { 
-				$value = stripslashes($value); 
-			}
 			$value = mysqli_real_escape_string($this->get_connection(),$value);
 		} else {
-			// if magic quotes aren't already on then add slashes manually
-			if(!$magic_quotes_active) { $value = addslashes($value); }
-			// if magic quotes are active, then the slashes already exist
+			$value = addslashes($value);
 		}
 		return $value;
 	}
